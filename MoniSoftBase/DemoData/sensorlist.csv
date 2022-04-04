@@ -1,0 +1,7 @@
+Messpunktkuerzel,Messpunktschluessel,Einheit,Faktor,Beschreibung,Intervall,Zaehler,Zustand,Manuell,Verbrauch,MinWerktag,MinWochenende,MaxWerktag,MaxWochenende,ValidWerktag,ValidWochenende,Gebaeude,Medium,Zaehlernummer,Virtuell
+T_V1,XYZ_ADC_TMP_DKU,°C,1,Temperatur Vorlauf 1,10,0,0,0,0,20,20,80,80,60,60,,,,
+WMZ_NEBEN,XYZ_ADC_WMZ_DKU,kWh,1,Wärmemenge Nebengebäude ,10,1,0,0,0,,,,,,,,,,
+F_R121,EV_F_121_DKU,0/1,1,Fensterstellung Raum 121,10,0,1,0,0,,,,,,,,,,
+S1,SE_17675_A3,kWh,1,Stromzaehler Vorderhaus,10,1,0,0,0,,,,,,,,,4646354354,
+S2,SE_17675_A4,kWh,1,Stromzaehler Hinterhaus,10,1,0,0,0,,,,,,,,,4636446333,
+S_Total,S_Total,kWh,1,Strom gesamt,10,1,0,0,0,,,,,,,,,,[S1]+[S2]

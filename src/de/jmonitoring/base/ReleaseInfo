@@ -1,0 +1,993 @@
+<html>
+<head>
+<STYLE type="text/css">
+.myClass
+{
+font-size:10pt;
+font-family:sans-serif
+}
+</STYLE>
+</head>
+
+<body>
+<div class ="myClass">
+<b>17-10-2017</b>
+<ul>
+<li><font>INFO</font>: Im Messpunkteditor ist der Button Verbrauch vorübergehend deaktiviert, bis die Funktionalität sichergestellt ist.</li>
+</ul>
+
+<b>01-12-2015</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-25: Im Dialog "Daten löschen" können nun Stunden, Minuten und Sekunden eingestellt werden. Außerdem enthält der Dialog neue Buttons zum Markieren von Daten als gültig und ungültig.</li>
+<li><font color=RED">FIX</font>: MONISOFT-26: Bereitstellung eines Datenbank-Updates für die Datenbank-Version 2.11 im MoniSoft Client unter Extras => Datenbank Update</li>
+<li><font color=RED">FIX</font>: MONISOFT-27: Die Einstellungen für Linien und Symbole gingen beim Wechsel zwischen linker und rechter Achse beim Erstellen einer neuen Grafik verloren.</li>
+<li><font color=RED">FIX</font>: MONISOFT-28: Die Liste der Markierungen im XY-Diagramm enthält nun wieder die im Benutzerhandbuch beschriebenen Komfortbereiche.</li>
+</ul>
+<p>
+
+<b>03-11-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-20: Die eingestellten Markierungen gingen verloren, wenn ein bisher nicht befüllter Meswert-Slot (W1, W2, …) ausgewählt wird.</li>
+<li><font color=RED">FIX</font>: MONISOFT-21: Markierungen können nun neben der Schnittmenge auch als Vereinigungsmenge dargestellt werden.</li>
+<li><font color=RED">FIX</font>: MONISOFT-22: In der Messpunkttabelle kann nun für jeden Messpunkt ein Zeitlicher Offset eingestellt werden und zusätzlich, ob eine Umstellung zwischen Sommer- und Winterzeit erfolgen soll. In Extras => Anwendungseinstellungen => Anzeige kann nun die Zeitzone des Clients eingestellt werden. Dafür ist ein Update der Datenbank auf die Version 2.11 erforderlich.</li>
+<li><font color=RED">FIX</font>: MONISOFT-24: Angezeigte Markierungstexte erschienen in einer Grafik mehrmals.</li>
+</ul>
+<p>
+
+<b>22-09-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-17: Die Formeln in virtuellen Zählern können mit der Funktion SKRIPT auch Wenn/Dann Abhängigkeiten beschreiben.</li>
+<li><font color=RED">FIX</font>: MONISOFT-19: Die Liste der Messpunktsammlungen wird jetzt automatisch alphabetisch sortiert.</li>
+</ul>
+<p>
+
+<b>28-08-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-16: Der nachträgliche Import von Eventdaten ist jetzt möglich.</li>
+<li><font color=RED">FIX</font>: MONISOFT-18: Bei Zeitbasis-Diagrammen mit mehreren Messwerten wurde die Linienauswahl beim Wechsel zwischen den Messwerten (W1, W2, ...) teils falsch übernommen.</li>
+</ul>
+<p>
+
+
+<b>09-07-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-12: In einer erzeugten Grafik kann mit einem Rechtsklick => Kopiere in Export der Exportdialog mit den Voreinstellungen aus der Grafik aufgerufen werden.</li>
+<li><font color=RED">FIX</font>: MONISOFT-13: Grafiken für virtuelle Messpunkte zeigen nun auch Werte, wenn nur einer der zugrundeliegenden Messpunkte Werte enthält.</li>
+</ul>
+<p>
+
+<b>06-06-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-10: In den Anwendungseinstellungen => Datenbehandlung wurde die Funktion "Folgenden Wert als Fehlerwert benutzen" nicht mehr korrekt angewendet.</li>
+<li><font color=RED">FIX</font>: MONISOFT-14: Zeitbasis-Diagramm: Bei Markierungen auf Basis von Filterkriterien wurde in den zusätzlichen Dateninformationen die Anzahl der markierten Intervalle falsch angegeben.</li>
+</ul>
+<p>
+
+<b>22-05-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-11: Die Ermittlung des letzten Messpunktes benötigt bei manchen Abfragen sehr lange.</li>
+</ul>
+<p>
+
+<b>12-05-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-8: Optimierung des Datenexports, wenn mehrere Validierungensmeldungen auftreten</li>
+</ul>
+<p>
+
+<b>15-04-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-7: Das Programm erkennt nun einzelne statistische Ausreißer nach oben.</li>
+</ul>
+<p>
+
+<b>03-04-2014</b>
+<ul>
+<li><font color=RED">FIX</font>: MONISOFT-1: Sämtliche Messpunkt-Listen werden jetzt automatisch alphabetisch sortiert</li>
+<li><font color=RED">FIX</font>: MONISOFT-2: In der Liste „Messpunktsammlungen“ konnte ab einer bestimmten Anzahl an Einträgen nicht mehr bis zum letzten Eintrag gescrollt werden.</li>
+<!-- <li><font color=RED">FIX</font>: MONISOFT-3: X/Y Diagramm / Scatterplot: Der ursprüngliche Datenpunkt für die x-Achse wurde fälschlicherweise verwendet</li> -->
+<li><font color=RED">FIX</font>: MONISOFT-4: Änderungen an Messpunktnamen wurden beim Import nicht mehr übernommen</li>
+<li><font color=RED">FIX</font>: MONISOFT-5: Der Import von Daten im MON-Format funktionierte nicht mehr mit einer beliebigen Spalten-Reihenfolge.</li>
+</ul>
+<p>
+
+<b>16-09-2013</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Bei detektierten, negativen Zählersprüngen, werden die nun als ungültigt vormarkeirt, wenn man über den eingeblendeten Dialog in den Dateneditor wechselt</li>
+<li><font color=RED">FIX</font>: Im Messpunkteditor konnten keine Messpunkte ohne Gebäudezuordnung angelegt werden.</li>
+<li><font color=RED">FIX</font>: Im der Messpunkttabelle wurde die Eigenschaft "Rücksetzender Zähler" nicht gespeichert wenn sie verändert wurde.</li>
+<li><font color=RED">FIX</font>: Rücksetzender Zähler werden nun korrekt berechnet. Voraussetzung: Rücksprung immer auf 0!!!</li>
+</ul>
+<p>
+
+<b>12-02-2013</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Die flache Messpunktliste kann nun auch in Editor für Messpunktsammlungen und Kategorieneditor sortiert werden</li>
+<li><font color=GREEN">NEU</font>: Beim Datenexport passt sich das Datumsformat nun an das Aggregationsintervall an.</li>
+<li><font color=GREEN">NEU</font>: Messpunktsammlungen und Vergleichsgrößen können nun umbenannt werden. (Rechtsklick auf den Namen im Editor für Messpunktsammlungen oder Vergleichsgrößen)</li>
+<li><font color=GREEN">NEU</font>: Auf der Kommandozeile können die erzeugten Grafiken nun auch per Mail verschicht verden.</li>
+<li><font color=GREEN">NEU</font>: Bei Verbrauchsvergleich und Gebäudeprofil kann nun bei der Wahl der Bezugsgröße auch entschieden werden ob der Verbrauch auf ein Jahr bezogen werden soll ("pro Jahr")</li>
+<li><font color=GREEN">NEU</font>: Bei Gebäudeprofil und Verbrauchsvergleich ist es nun möglich, nicht nur ein ganzes Kalenderjahr, sondern einen 12 Monats-Zeitraum mit beliebigem Beginn (monatsweise) zu wählen oder auch einen einzelnen Monat</li>
+<li><font color=GREEN">NEU</font>: Über die Tabelle zur Beurteilung von Monatsverbräuchen kann nun auch eine grafische Darstellung erreicht werden.</li>
+<li><font color=GREEN">NEU</font>: Neue Option in Anwendungseinstellungen: Es können nun auch (Teil-!!)Verbräuche berechnet werden wenn ein Intervall nicht vollständig mit Werte abgedeckt ist.</li>
+<li><font color=RED">FIX</font>: SQL-Datei für Datenbankupdate wurde nicht gefunden, das Update schlug fehl.</li>
+<li><font color=RED">FIX</font>: Die Eventumstrukturierung brach ab wenn die maximale Gültigkeit eines Eventmesspunkts nicht definiert war.</li>
+<li><font color=RED">FIX</font>: Inkonsistente Messpunktkategorien möglich wenn ein Kategoriename gewählt wurde der mit einer MesspunktID identisch war.</li>
+<li><font color=RED">FIX</font>: Robusterer Import von CSV Dateien. Zeilen mit falscher Spaltenzahl werden einfach überlesen und führen nicht mehr zum Abbruch des Imports.</li>
+<li><font color=RED">FIX</font>: Beim Wechsel von der Messpunktliste zum Messpunkteditor wurde als Gebäude immer nur das erste aus der Liste selektiert.</li>
+<li><font color=RED">FIX</font>: Hängende Berechnung bei Zeitraumvergleich wenn Kalendertage verglichen werden sollten.</li>
+<li><font color=RED">FIX</font>: Manuelle Dateneingabe: Panel für neuen Eintag konnte nicht erzeugt werden.</li>
+<li><font color=RED">FIX</font>: Bei ungültigen Messpunkten in den Formeln virtueller Messpunkte wurden diese nicht korrekt in der Fehlermeldung benannt.</li>
+<li><font color=RED">FIX</font>: Messpunkte konnten nicht per Drag and Drop auf die Auswahllisten gezogen werden wenn in den Anwendungseinstellungen "Zeige Messpunktschlüssel..." gewählt war.</li>
+<li><font color=RED">FIX</font>: Formeln virtueller Messpunkte wurden beim Einlesen einer Messpunktliste nicht mit eingetragen und beim Export auch nicht herausgeschrieben.</li>
+<li><font color=RED">FIX</font>: Abbruch beim Anzeigen von Messpunkten ohne Gebäudezuordndung im Messpunkteditor. Dort wird nun "Ohne Gebäudezuordnung" angezeigt</li>
+<li><font color=RED">FIX</font>: Beim CSV-Import wurde u.U. der Kopf der Datums/Zeitspalte als unbekannter Messpunkt gemeldet</li>
+<li><font color=RED">FIX</font>: Die Berechnung blieb hängen, wenn bei einem virtuellen Messpunkt dessen eigener Bezeichner in der Formel auftrat. (Zirkelbezug)</li>
+<li><font color=RED">FIX</font>: Bei sehr kleinen Faktoren wurden diese in der Messpunktliste mit 0 angegeben. (Die Berechnung erfolgte mit dem korrekten Faktor)</li>
+<li><font color=RED">FIX</font>: Bei Zeitbasisdiagrammen bessere Menüführung bei gestapelten Balken/Flächen (da hier nur eine Achse pro Diagramm möglich)</li>
+<li><font color=RED">FIX</font>: Passwortdialog kam bei missglückter Datenbankanmeldung nicht mehr wunschgemäss zurück zur Korrektur der Zugangsdaten</li>
+<li><font color=RED">FIX</font>: Besserer Umgang mit Zählerwechseln. Sie wurden teilweise nicht erkannt wenn sie mitten in einem längeren Abfrageintervall lagen</li>
+<li><font color=RED">FIX</font>: Anwendungseinstellungen für automatischen Zählerwechseleintrag wurden nicht gespeichert</li>
+</ul>
+<p>
+
+<b>09-11-2012</b>
+<ul>
+<li><font color=RED">FIX</font>: Bei Passwörtern mit Sonderzeichen konnte die Anmeldung u.U. fehlschlagen.</li>
+<li><font color=RED">FIX</font>: Beim Lesen der Messpunktliste aus der DB wurden die Wandlungsfaktoren nur noch als Ganzzahl übernommen.</li>
+</ul>
+<p>
+
+<b>08-01-2013</b>
+<ul>
+<li><font color=GREEN">NEU</font>: In den Anwendungseinstellungen kann nun gewählt werden ob der Gebäudename an die Messpunktnamen angehängt werden soll. Dies gilt nur wenn mehrere Gebäude definiert sind.</li>
+<li><font color=GREEN">NEU</font>: Im Wähler für Messpunktkategorien kann bei flacher Liste nun alphabetisch sortiert werden</li>
+<li><font color=GREEN">NEU</font>: Die Hintergrundmarkierungen in Scatterplots können nun über einen Editor selbst gestaltet werden</li>
+<li><font color=GREEN">NEU</font>: Im Menü "Daten" gibt es einen neuen Menüpunkt "Daten prüfen" mit dem die Konsistenz von Daten geprüft werden kann.</li>
+<li><font color=GREEN">NEU</font>: Im Menü "Auswertungen" gibt es einen neuen Menüpunkt "Messpunktstatistik" mit dem einige statistische Werte zu einzelnen Messpukten angezeigt werden können.</li>
+<li><font color=RED">FIX</font>: Carpetcharts konnten nicht (per "linker Hand") in die Auswahlfelder übernommen werden.</li>
+<li><font color=RED">FIX</font>: Wurde eine Grafikbeschreibung mit der "linken Hand" in die Auswahlfelder übernommen und danach die Grafikart gewechselt blieb die Grafikerzeugung hängen.</li>
+<li><font color=RED">FIX</font>: Unter Umständen konnte es zu Exceptions führen wenn ein Messpunkt ohne Gebäudezuordnung aber mit Bezgsgrößen verwendet wurde</li>
+<li><font color=RED">FIX</font>: Wertefilter wurden bei Zeitbasisdiagrammen nicht in die Grafikbeschreibungen übernommen</li>
+<li><font color=RED">FIX</font>: Wertefilter wurden bei Zeitbasisdiagrammen nur gezeichnet wenn gleichzeitig "Fehlzeiten markieren" gewählt war</li>
+<li><font color=RED">FIX</font>: CSV-Import großer Dateien konnte sehr lange dauern oder fehlschlagen. Dateigröße nun unerheblich.</li>
+<li><font color=RED">FIX</font>: Bei der Kommadozeile konnte der Import fehlschlagen wenn in Import-Format-Dateien Einträge leer waren, die im speziellen Fall aber sowieso nicht zu trage kämen.</li>
+<li><font color=RED">FIX</font>: Im Messpunkteditor wurde der Faktor versehentlich falsch geparst, so dass er sich bei jedem Aufruf verzehnfachte.</li>
+<li><font color=RED">FIX</font>: Messpunkte konnten nicht neu angelegt werden, wenn ihnen kein Gebäude zugeordnet wurde.</li>
+<li><font color=RED">FIX</font>: Vergleichsgrößen in denen ein Gebäude nicht vertreten war führten beim Löschen dieser Vergleichsgröße zum Absturz des Vergleichsgrößeneditors</li>
+<li><font color=RED">FIX</font>: Es konnten keine Veränderungen an Messpunktsammlungen vorgenommen werden, wenn eine Sammlung einen nicht mehr existierenden Messpunkt beinhaltete</li>
+<li><font color=RED">FIX</font>: Speichervorgang der Messpunktsammlungen beschleunigt</li>
+</ul>
+<p>
+
+<b>06-11-2012</b>
+<ul>
+<li><font color=GREEN">NEU</font>:In der Qualitätsübersicht gibt es einen neuen "Änderungsmodus". Hier werden Zeiten in denen sich ein Messwert über eine gewisse Zeit (wählbar) nicht geändert hat rot dargestellt, andernfalls grün.</li>
+<li><font color=RED">FIX</font>: Fehlerhafte Namensdarstellung von Messpunkten im Kategorieneditor wenn mehrere Gebäude definiert sind.</li>
+<li><font color=RED">FIX</font>: Bei Projekten mit mehreren Gebäuden wurden in der Datenpflege die Wandlungsfaktoren nicht angebracht.</li>
+</ul>
+<p>
+
+<b>02-11-2012</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Der Ort der Anwendung 'mysqldump', die für das Backup notwendig ist, kann nun über die Anwendungseinstellungen festgelegt werden. Das erspart das Ändern von Umgebungsvariablen im Betriebssystem.</li>
+<li><font color=GREEN">NEU</font>: Das Erzeugen einer Vergleichstabelle als Favorit beim Systemstart wurde freigeschaltet</li>
+<li><font color=GREEN">NEU</font>: Interpolationsmethoden nun durch umfangreiche Tests (Junit) validiert</li>
+<li><font color=RED">FIX</font>: Die Qualitätsübersicht funktionierte nicht mehr wenn die Version der Java-Runtime Umgebung kleiner Java 7 (JRE 1.7) war</li>
+<li><font color=RED">FIX</font>: Erweiterung der importierbaren Datumsformate beim CSV-Import</li>
+<li><font color=RED">FIX</font>: Beim Ändern des Datums in der Vergleichstabelle wurden die Spaltenüberschriften nicht mit angepasst</li>
+<li><font color=RED">FIX</font>: In Monatsübersicht mögliches Hängen beim speichern behoben</li>
+<li><font color=RED">FIX</font>: Überarbeitung der interpolationsmethoden</li>
+<li><font color=RED">FIX</font>: Intervaländerungen an der Mehrband-Datumsachse über den Grafikeigenschaften-Dialog wurden nicht übernommen.</li>
+<li><font color=RED">FIX</font>: Bei eingeschalteter Kantentoleranz möglicherweise flasche Berechnung der Toleranzdauer</li>
+</ul>
+<p>
+
+<b>24-09-2012</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Bei linearer Regression wird nun der Korrelationskoeffizient angezeigt</li>
+<li><font color=GREEN">NEU</font>: In der Verbrauchsübersicht wird nun bei gestapelten Balken auch der Gesamtverbrauch über den Balken angezeigt wenn Beschriftung aktiviert</li>
+<li><font color=GREEN">NEU</font>: Klimabereinigung in Gebäudekennfeld</li>
+<li><font color=GREEN">NEU</font>: Im Gebäudekennfeld können die Felder außer über den Mittelwert aller Gebäude auch durch über Perzentile (der Wert unterhalb dessen x% der Gebäude liegen) definiert werden.</li>
+<li><font color=GREEN">NEU</font>: Wahl der Zieleinheit im Gebäudekennfeld nun aktiv</li>
+<li><font color=GREEN">NEU</font>: Im Clustereditor können bestehende Cluster nun auch gelöscht werden.</li>
+<li><font color=GREEN">NEU</font>: Klimabereinigung nun auch in der Clustermatrix aktivierbar</li>
+<li><font color=GREEN">NEU</font>: Limiten für die Einfärbung der Abweichungsprozente in der Vergleichstabelle nun änderbar (Klick auf die Farbfelder)</li>
+<li><font color=GREEN">NEU</font>: Neuer Drucken-Knopf in Vergleichstabelle, Gebäudeliste, Tabelle der Bezugsgrößen</li>
+<li><font color=GREEN">NEU</font>: Lokales Datenbankbackup im Menü Datenbank frei gegeben. Funktioniert nur bei installiertem mysqldump. Prozess ist zur Zeit allerdings nicht vollständig abbrechbar!</li>
+<li><font color=GREEN">NEU</font>: Die Fortschrittsanzeige in der Statusleiste kann nun mehrere Prozesse gleichzeitig aufnehmen und jeden einzeln unterbrechen</li>
+<li><font color=GREEN">NEU</font>: Die Qualitätsübersicht ist nun "wiederverwendbar". Die Bedienelemente bleiben erhalten und es muss nicht erst über das Menü ein neues Fenster geöffnet werden. Stattdessen blendet der Knopf "Neue Auswahl" wieder die Messpunktliste ein.</li>
+<li><font color=RED">FIX</font>: In der Datenpflege wurde die Grafik nicht aktualisiert wenn auf "Wandlungsfaktoren anbringen" geklickt wurde</li>
+<li><font color=RED">FIX</font>: Bei vielen Gebäuden in der Datenbank konnte die Datenbankverbindung durch langsames Lesen der Bezugsgrößen relativ lange dauern.</li>
+<li><font color=RED">FIX</font>: Erzeugung der Grafiken in der Clustermatrix in Thread ausgelagert, da die Anwendung sonst für einige Zeit blockiert sein konnte.</li>
+<li><font color=RED">FIX</font>: In der Vergleichstabelle wurden die Datumsangaben der Spaltenköpfe bei einer Änderung des Referenztages nicht mitgeändert</li>
+<li><font color=RED">FIX</font>: Wurde im Dateneditor eine neue Grafik gestartet bevor eine vorherige fertig war hatten alle Grafiken nach der Fertigstellung die Überschrift und die Einheit des letzten Messpunkts (Mantis 0000045)</li>
+<li><font color=RED">FIX</font>: Messpunkte die keine Daten hatten konnten nicht korrekt aus der Messpunkttabelle gelöscht werden. (Mantis 0000050)</li>
+</ul>
+<p>
+
+<b>14-09-2012</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Bei Scatterplots können nun Regressionslinien eingeblendet werden. Verfügbar sind: linear (y=a*x+b), potenz (y=a*x^b), polynomisch (y = a0 + a1 * x + a2 * x^2 + ... + an * x^n)  mit n=2 bis 15</li>
+<li><font color=GREEN">NEU</font>: Beim Datenexport können die Ausgabedateien nun ZIP-komprimiert werden. (Kontrollkästchen im Exportdialog)</li>
+<li><font color=RED">FIX</font>: Beim CSV und MON-Import konnten einige ungültige (0-)Werte für Messpunkte in die Datenbank geschrieben werden, wenn deren Spalte leer war.</li>
+</ul>
+<p>
+
+<b>07-09-2012</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Die Kommandozeile kann nun auch Formatdateien für den CSV-Import interaktiv erzeugen</li>
+<li><font color=GREEN">NEU</font>: Balkenbreite im Fenster zur Sortierung der Gebäude nach Bezugsgrößen nun anpassbar</li>
+<li><font color=GREEN">NEU</font>: Neues Menü "Gebäude neu anlegen"</li>
+<li><font color=GREEN">NEU</font>: Der Passwortdialog merkt sich nun die Nutzer- und Datenbank- und Serverangabe der letzten Verbindung. Wird übersteuert sobald Vorgabewerte in den Anwendungseinstellungen gespeichert sind.</li>
+<li><font color=RED">FIX</font>: Leere Zellen waren in der Sensortabelle nicht veränderbar</li>
+<li><font color=RED">FIX</font>: Bei Zeitbasisdiagrammen mit aktivierten Bedingungen wurden die Werte in den markierten Zeitbereichen aus der Messreihe entfernt (statt sie nur zu markieren)</li>
+<li><font color=RED">FIX</font>: Bei Zeitbasisdiagrammen mit aktivierten Bedingungen waren die Markierungen invertiert (Markierung aktiv wenn Bedingung nicht erfüllt) </li>
+<li><font color=RED">FIX</font>: Allgemeine Anpassung der Grafikinformationen. Bei Scatterplots werden nun auch Datums- und Zeitbeschränkungen ausgewiesen</li>
+<li><font color=RED">FIX</font>: Bei Scatterplts falsche Verwendung des Aggregationsintervalls, wenn es geändert wurde während ein anderer als der Slot 1 aktiv war</li>
+<li><font color=RED">FIX</font>: Bei Carpetplots wurde in der Achsenbeschriftung immer noch ein Zeitbezug eingefügt wenn ein solcher vormals aktiv war aber wieder entfernt wurde.</li>
+<li><font color=RED">FIX</font>: Bei Zeitraumvergleichen waren keine Jahresvergleiche möglich</li>
+<li><font color=RED">FIX</font>: Fehlertoleranterer CSV-Import. Besserer Hinweis auf unbekannte Messpunkte in der Importdatei</li>
+<li><font color=RED">FIX</font>: Bessere Toleranz bei der Berechnung der Monatsverbräuche</li>
+<li><font color=RED">FIX</font>: Nicht verwendete Punkte aus der Konfigurationsdatei für Anwenungseinstellungen entfernt</li>
+<li><font color=RED">FIX</font>: Verschlankung der Roh-Datenbank um ca 20% ! (ab DB-Version 2.7)</li>
+<li><font color=RED">FIX</font>: Kommandozeile: Absturzmöglichkeit bei falscher Datumsangabe entschärft</li>
+<li><font color=RED">FIX</font>: Inkonsistente Gruppenbildung im Fenster zur Sortierung der Gebäude nach Bezugsgrößen behoben</li>
+<li><font color=RED">FIX</font>: Beim Anlegen eines neuen Gebäudes waren dessen Bezugsgrößen erst nach neuem Verbinden mit dem Projekt verfügbar</li>
+<li><font color=RED">FIX</font>: Beim Löschen eines Gebäudes aus der Gebäudetabelle werden nun alle Bezugsgrößen, Vorkommen in Vergleichsgrößen und Clustern sowie die Messpunktzuordnungen des betreffenden Gebäudes sauber mit gelöscht</li>
+<li><font color=RED">FIX</font>: Beim CSV-Import wurden Abbruchgründe nicht korrekt genannt</li>
+<li><font color=RED">FIX</font>: Bei kurzen Messintervallen konnte es im Zshg.mit bestimmten Werten bei der Abdeckungstoleranz dazu kommen, dass bei längeren Betrachtungsintervallen alle Intervalle null wurden.</li>
+<li><font color=RED">FIX</font>: Spezifischere Meldungen bei nicht geglückter Datenbankanmeldung.</li>
+<li><font color=RED">FIX</font>: Bei Dauerliniendiagrammen wurde eine Verbrauchseinheit (z.B. kWh) an der Werteachse angezeigt auch wenn dort Leistung (kW) dargestellt wurde.</li>
+<li><font color=RED">FIX</font>: Bei Zeitbasisdiagrammen mit Stapelbalken wurden gewählte Bezugsgrößen nicht berücksichtigt</li>
+<li><font color=RED">FIX</font>: Bei Zeitbasisdiagrammen mit Stapelbalken und aktivierten Bedingungen wurden keine Bereichsmarkierungen oder Fehlzeiten gezeichnet</li>
+<li><font color=RED">FIX</font>: Bei Zeitbasisdiagrammen mit Stapelbalken wurden keine Grafikinformationen ausgegeben</li>
+<li><font color=RED">FIX</font>: Der Messpunkteditor war im Betrachtungsmodus nicht vollständig gesperrt.</li>
+<li><font color=RED">FIX</font>: Abfangen von einigen möglichen Fehlern wenn keine Gebäude definiert waren aber Benchmarkfunktionen genutzt wurden</li>
+</ul>
+<p>
+
+<b>28-06-2012</b>
+<ul>
+<li><font color=GREEN">NEU</font>: In Qualitätsübersicht können nun auch Messpunktsammlungen ausgewählt werden.</li>
+<li><font color=GREEN">NEU</font>: Für Scatterplots: Komfort-Grenzline für Bielefelder Urteil ("32/6-Regel") hinzugefügt. DIN 1946/2: Bereich für höhere Außentemperaturen erweitert.</li>
+<li><font color=RED">FIX</font>: Fehlerhafte Überschriftenbildung in der Verbrauchsübersicht bei aktivierter Klimabereinigung</li>
+<li><font color=RED">FIX</font>: Pannig (Verschieben des Grafikausschnitts mit gedrückter CTRL-Taste) funktioniert nun auch bei der Qualitätsübersicht und in der Datenpflege korrekt.</li>
+<li><font color=RED">FIX</font>: Zoom per Mausrad bei Qualitätsübersicht gefixt.</li>
+<li><font color=RED">FIX</font>: "Sägezahnproblem" bei Dauerlinien bei unmgekehrter Sortierreihenfolge behoben.</li>
+<li><font color=RED">FIX</font>: Falsche Einheit in Dauerliniendiagrammen in Untertitel wenn Achsen getauscht werden.</li>
+<li><font color=RED">FIX</font>: Abfangen von unerwünschtem Verhalten beim Importieren einer fehlerhaften / inkonsistenten Messpunktliste</li>
+<li><font color=RED">FIX</font>: Beim wieder verwenden von Grafikbeschreibungen (mittels "Hand nach links") wurde immer der ursprüngliche Zeitraum angezeigt und im Untertitel verwendet
+</ul>
+<p>
+
+<b>21-05-2012</b>
+<ul>
+<li><font color=RED">NEU</font>: Anpassung der Zeichengrößen und Stile im Kontextdialog zu den Grafiken möglich</li>
+<li><font color=RED">FIX</font>: Einige Fehler im Kontextdialog zu den Grafiken behoben</li>
+<li><font color=RED">FIX</font>: Gebäude die zu einer BESTEHENDEN Verbrauchkategorie hinzugefügt wurden konnten nicht in der Verbrauchsübersicht angezeigt werden.</li>
+<li><font color=RED">FIX</font>: Mögliche Inkonsistenzen bei der Verwaltung der Verbrauchskategorien behoben.</li>
+</ul>
+<p>
+
+<b>30-04-2012</b>
+<ul>
+<li><font color=RED">FIX</font>: Im Gebäudeprofil wurden durch einen Fehler in der Einheitendarstellung keine Verbräuche angezeigt</li>
+<li><font color=RED">FIX</font>: Ungewünschtes Verhalten beim Ändern der Einheit eines Messpunktes direkt in der Sensortabelle</li>
+<li><font color=RED">FIX</font>: Überprüfung der Abdeckung eines Intervalls und der Einhaltung der erlaubten Toleranzen an Intervallgrenzen (bei Zählern) griff nicht immer</li>
+<li><font color=RED">FIX</font>: In SensorEditorDialog wurde eine falsche Einheit für alle Messpunkte angezeigt</li>
+<li><font color=RED">FIX</font>: Bei Datenbanken die mit einer alten Version erzeugt wurden, konnten keine neuen Einheiten angelegt werden.</li>
+<li><font color=RED">FIX</font>: Es konnten keine neuen Projekte mehr angelegt werden.</li>
+<li><font color=RED">FIX</font>: Beim Ändern mehrerer Gebäude in der Gebäudetabelle wurden nur die Änderungen des ersten Gebäudes übernommen.</li>
+<li><font color=RED">FIX</font>: Im Gebäudeprofil wurden die Bilder der Gebäude nicht gespeichert</li>
+<li><font color=RED">FIX</font>: Nach dem Wechsel des Projektes konnten keine gespeicherten Grafikbeschreibungen mehr geladen werden.</li>
+</ul>
+<p>
+
+<b>04-04-2012</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Import von Klimafaktoren des DWD direkt aus dessen XLS-Dateien (http://www.dwd.de/klimafaktoren)</li>
+<li><font color=GREEN">NEU</font>: Fortschrittsanzeige für einige Vorgänge (zur Zeit Eventrekonstruktion, Import Klimafaktoren, Berechnung Monatsverbräuche) am unteren Rand mit Möglichkeit zum Abbruch</li>
+<li><font color=GREEN">NEU</font>: Bei Verbrauchskategorien kann nun gewählt werden ob sie von einer Klimabereinigung betroffen sind</li>
+<li><font color=GREEN">NEU</font>: Editor zum Ändern/Hinzufügen von Einheiten erstellt.(Menü Messpunkte -> Einheiten) </li>
+<li><font color=RED">FIX</font>: Bemerkungen in Grafiken aufgeräumt.</li>
+<li><font color=RED">FIX</font>: Viele kleine Fehlerkorrekturen/Stabiltätsverbesserungen</li>
+<li><font color=RED">FIX</font>: Monatsverbräuche wurden nicht überschrieben wenn ein fehlender Wert durch eine Schätzung ersetzt werden sollte.</li>
+<li><font color=RED">FIX</font>: In der Verbrauchsübersicht wird nun ein Hinweis eingeblendet wenn ein Verbrauch bereinigt wurde.</li>
+<li><font color=RED">FIX</font>: Fehlerhafte Zuordnung der Spaltentypen in der Sensorliste führte bei Änderung der Gültigkeit eines Messpunktes zum Einfrieren der Tabelle</li>
+<li><font color=RED">FIX</font>: Umgang mit Bezugsgrößen vereinheitlicht</li>
+<li><font color=RED">FIX</font>: Allgemeine Verbesserung der Thread-Sicherheit bei nebenläufigen Prozessen</li>
+<li><font color=RED">FIX</font>: Anmerkungen wurden nicht immer bis zur Grafik durchgereicht</li>
+<li><font color=RED">FIX</font>: Dateneditor zeigte nur Faktorenwechsel aber keine Zählerwechsel als Anmerkungen</li>
+<li><font color=RED">FIX</font>: Beim Eintragen eines Zählerwechsels WÄHREND der Erstellung einer Grafik (weil negativer Zählersprung detektiert) wurden die daraus resultierenden Werte nicht sofort für diese Grafik genutzt (das Intervall war ungültig)</li>
+<li><font color=RED">FIX</font>: Bei detektiertem Zählerwechsel und Wunsch des Nutzers abzubrechen und den Dateneditor anzuzeigen wurde die Berechnung ununterbrechbar trotzdem weiter geführt</li>
+<li><font color=RED">FIX</font>: Bei den Standarddiagrammen (im Moment jedoch nur Zeitbasis und Carpet) wurden keine Bezugsgrößen angezeigt, wenn der Messpunkt keiner Vergleichsgrösse zugeordnet war. Nun genügt die Zuordnung zu einem Gebäude (von dem die Bezgsgrössen ja kommen )</li>
+</ul>
+<p>
+
+<b>07-03-2012</b>
+<ul>
+<li><font color=RED">FIX</font>: Daten von Messpunkten denen kein Gebäude zugeordnet war wurden nicht mehr dargestellt</li>
+<li><font color=RED">FIX</font>: In den Messpunktsammlungen erschien ein Platzhaltertext statt der Messpunktbeschreibung</li>
+</ul>
+<p>
+
+<b>05-03-2012</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Die Messpunktliste kann jetzt exportiert werden (Menü Messpunkte -> Messpunktliste exportieren)</li>
+<li><font color=GREEN">NEU</font>: Beim Einlesen einer Messpunktliste (nur über Menü Messpunkte -> Messpunktliste importieren) kann nun gewählt werden, ob bestehende Messpunkte verändert werden sollen (Name oder Schlüssel müssen gleich bleiben)</li>
+<li><font color=RED">FIX</font>: Virtuelle Messpunkte wurden nicht berechnet</li>
+<li><font color=RED">FIX</font>: Unter Umständen unendliche Berechnung wenn bei kleinen Interpolationsintervallen im Betrachtungszeitraum eine Zeitumstellung lag</li>
+<li><font color=RED">FIX</font>: Bei virtuellen Messpunkten welche aus Verbrauchern bestanden konnten nur Verbräuche und keine Leistungen berechnet werden.</li>
+<li><font color=RED">FIX</font>: Bei Messpunkten die Verbräuche direkt lieferten (keine Zählerstände) waren die Wähler für Verbrauch/Leistung deaktiviert</li>
+<li><font color=RED">FIX</font>: Wertelisten (zu den Messreihen) waren nicht mehr markierbar (für copy & paste)</li>
+<li><font color=RED">FIX</font>: Messpunkte mit Leerzeichen im Namen konnten nicht durch Drag & Drop in die Auswahlfelder übernommen werden</li>
+<li><font color=RED">FIX</font>: Entfernung der Spalte "Regelmaessig" aus der Messpunktliste</li>
+</ul>
+<p>
+
+<b>02-02-2012</b>
+<ul>
+<li><font color=GREEN">Neu</font>: Bezugsgrößen können über das Menü "Gebäude -> Bezugsgrößen definieren" angelegt werden.</li>
+<li><font color=GREEN">Neu</font>: Über das Menü "Gebäude -> Tabelle der Bezugsgrößen" können Gebäuden nun Werte für die verschiedenen Bezugsgrößen zugewiesen werden</li>
+<li><font color=GREEN">Neu</font>: Beim Löschen von Messpunkten und Gebäuden wird nun eine zusammenfassende Übersicht eingeblendet was gelöscht/geändert wird.</li>
+<li><font color=GREEN">Neu</font>: Handbuch als PDF-Version in die Hilfe aufgenommen.</li>
+<li><font color=RED">FIX</font>: Deutlich schnellere Anbindung an Projekte beim Start</li>
+<li><font color=RED">FIX</font>: Optimierung der Performance der Datenpflege</li>
+<li><font color=RED">FIX</font>: Allgemeine Optimierungen in der Performance wesentlicher Komponenten</li>
+<li><font color=RED">FIX</font>: CSV-Import deutlich beschleunigt</li>
+<li><font color=RED">FIX</font>: Überarbeitung des Interpolators</li>
+<li><font color=RED">FIX</font>: Berechnungstool für Monatsverbräuche bei fehlenden Tagen</li>
+<li><font color=RED">FIX</font>: Abbruch beim Nachtragen von Messpunkten in die Messpunktliste</li>
+<li><font color=RED">FIX</font>: Reorganisation der Eventdaten funktionierte nicht, wenn für den Messpunkt keine maximale Gültigkeitsspanne angegeben war.</li>
+<li><font color=RED">FIX</font>: Passwortdialog konnte u.U. blockiert sein, wenn die Anmeldung beim ersten mal fehl schlug.</li>
+<li><font color=RED">FIX</font>: Wertefilter waren deaktiviert und nicht funktional. (Mantis 0000046)</li>
+<li><font color=RED">FIX</font>: Nun gleich bleibende Messpunktreihenfolge in Messpunktsammlungen beim CSV-Export (Mantis 0000047)</li>
+<li><font color=RED">FIX</font>: Im Datenexport werden die Dateinamen beim Export von Rohdaten nun korrket zusammengestellt. (Mantis 0000044)</li>
+<li><font color=RED">FIX</font>: In der Messpunkt- und Gebäudetabelle konnten die falschen Elemente gelöscht werden, wenn die Tabelle nach einer Spalte sortiert wurde.</li>
+<li><font color=RED">FIX</font>: Reorganisierte Events wurden nicht exportiert, Vorgang fror ein.</li>
+<li><font color=RED">FIX</font>: Bei der Definition von Vergleichsgrößen konnten mehrere zuständige Messpunkte für das selbe Gebäude eingetragen werden.</li>
+<li><font color=RED">FIX</font>: Fehleranfälliges Datenbank-Handling von Messpunktsammlungen verbessert (Messpunktsammlungen konnten im Fehlerfall alle gelöscht werden)</li>
+<li><font color=RED">FIX</font>: Gebäude waren auch bei gesperrter Tabelle löschbar.</li>
+</ul>
+<p>
+
+
+<b>28-10-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: In der Qualitätsübersicht werden Überschreitungen der Wertegrenzen des Messpunkts jetzt orange dargestellt.</li>
+<li><font color=GREEN">NEU</font>: In der Datenpflege kann nun gewählt werden, ob eventuelle Wandlungsfaktoren am Messpunkt angebracht werden sollen (bisher nur Sicht auf die reinen Messwerte)</li>
+<li><font color=GREEN">NEU</font>: Im Zählerwechseldialog kann jetzt auf Knopfdruck der Zählerstand vor und nach dem angegebenen Wechselzeitpunkt vorbelegt werden.</li>
+<li><font color=GREEN">NEU</font>: In der Datenpflege können nun Anmerkungen zu den Datenpunkten eingeblendet werden. In dieser Version noch beschränkt auf eventuelle Faktorenwechsel.</li>
+<li><font color=RED">FIX</font>: Leere (null) Einträge in der Messpunkttabelle wurden als '0' dargestellt statt als leere Zelle.</li>
+<li><font color=RED">FIX</font>: Mehrfach (mehr als 1 Iteration) verschachtelte virtuelle Messpunkte konnten nicht berechnet werden</li>
+<li><font color=RED">FIX</font>: Durch eine Änderung in den Legenden wurden plötzlich unnötigerweise die Messdaten selbst in die Grafikbeschreibungen geschrieben, was diese u.U. sehr groß werden ließ. (Mantis 0000036, 0000037)</li>
+<li><font color=RED">FIX</font>: Zu einem Zähler konnte nur ein einziger Zählerwechsel eingetragen werden.</li>
+<li><font color=RED">FIX</font>: Im Zählerwechseldialog war die Filterung nach Zählern die einen Zählerwechsel haben sehr langsam.</li>
+</ul>
+<p>
+
+<b>25-10-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Messpunktsammlungen können nun über das Kontextmenü zu einer Grafik gespeichert werden. Dabei werden alle in der Grafik enthaltenen Messpunkte verwendet.</li>
+<li><font color=GREEN">NEU</font>: Neuer Editor für Messpunktsammlungen im Menü "Messpunkte -> Messpunktsammlungen"</li>
+<li><font color=GREEN">NEU</font>: Es können nun Favoriten angelegt werden. So gewählte Grafikbeschreibungen können beim Programmstart automatisch geladen werden. (siehe Hilfe)</li>
+<li><font color=RED">FIX</font>: Löschen von Verbrauchskategorien funktionierte nicht korrekt</li>
+<li><font color=RED">FIX</font>: Hilfe öffnete sich manchmal nicht</li>
+<li><font color=RED">FIX</font>: Kleine Fehler in Logging für Kommandozeile behoben</li>
+<li><font color=RED">FIX</font>: Darstellung der Datenpflege etwas beschleunigt, das "gültig machen" von Messpunkten um Faktor 50 beschleunigt.</li>
+<li><font color=RED">FIX</font>: Fehlerhafte Zuordnung von Gültigkeitsspannen in Messpunkttabelle behoben</li>
+<li><font color=RED">FIX</font>: Log-Eintrag nun auch beim Verändern von Messpunkten</li>
+</ul>
+<p>
+
+<b>18-10-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Möglichkeit für Angabe einer Log-Datei in Kommandozeile hinzugefügt</li>
+<li><font color=GREEN">NEU</font>: Bei den Grafikeigenschaften wird das Panel für die Einstellung der Wertebereiche nun angepasst, je nachdem ob die Grafik eine Zeit- oder Werteachse als Domänenachse besitzt (Mantis 0000029)</li>
+<li><font color=RED">FIX</font>: Kleine Änderung der Event-Balkenerzeugung, die u.U. noch immer Balken fehlerhaft anzeigte (Mantis 0000032, 0000034)</li>
+<li><font color=RED">FIX</font>: Die Zeitachse und der Titel werden nun auch bei Grafikbeschreibungen von REINEN Eventplots mitgespeichert (Mantis 0000033)</li>
+<li><font color=RED">FIX</font>: Beim Laden von Grafikbeschreibungen mit geändertem Zeitraum wird dieser nun in der Überschrift mitgeführt (Mantis 0000035, 0000026) (siehe auch V16-09-2011)</li>
+</ul>
+<p>
+
+
+<b>07-10-2011</b>
+<ul>
+<li><font color=RED">FIX</font>: Eventbalken beginnen nun immer ALLE am Start des Abfrageintervalls (Mantis 0000030)</li>
+<li><font color=RED">FIX</font>: Beim Importieren einer Messpunktliste werden nun fehlende Einheiten in die DB nachgetragen</li>
+</ul>
+<p>
+
+
+<b>04-10-2011</b>
+<ul>
+<li><font color=RED">FIX</font>: Balken von Eventdaten werden nicht mehr über das Abfrageintervall hinaus gezeichnet. (Mantis 0000028, 0000025)</li>
+<li><font color=RED">FIX</font>: Darstellung von Eventdaten zieht nun Status vor dem Abfrageintervall korrekt ein (bisher als 'nicht vorhanden' bis zum ersten event eingetragen)(</li>
+</ul>
+<p>
+
+<b>29-09-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Die Grafiklegende kann nun ausgeblendet werden (Grafikeigenschaften -> Tab "Grafikinfo")</li>
+<li><font color=GREEN">NEU</font>: Anmerkungen zur Grafik (z.B. Hinweise auf Fehlzeiträume) können nun ausgeblendet werden (Grafikeigenschaften -> Tab "Grafikinfo")</li>
+<li><font color=RED">FIX</font>: Die Generierung von Zeitbasisdiagrammen schlug fehl, wenn ausschliesslich Eventdaten angezeigt werden sollten. (Mantis 0000027)</li>
+</ul>
+<p>
+
+<b>28-09-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Die Importdialoge merken sich nun den letzten Importordner.</li>
+</ul>
+<p>
+
+<b>27-09-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: In einer LOG-Datei werden nun Veränderungen an der Datenbank geloggt. (Bisher nur beim Löschen von Messpunkten und Gebäuden)</li>
+<li><font color=GREEN">NEU</font>: In der Datenpflege wird nun die Differenz des gewählten Messwerts zum Vorwert angezeigt. Ungültig markierte Messwerte werden ignoriert.</li>
+<li><font color=RED">FIX</font>: Importdateien wurden dem Import evtl. nicht ordnungsgemäß geschlossen.</li>
+<li><font color=RED">FIX</font>: Virtuelle Messpunkte bei denen der gleiche Messpunkt mehrmals vorkam wurden nicht berechnet.</li>
+<li><font color=RED">FIX</font>: Änderungen an der Messpunktliste wurden erst nach der zweiten Änderung gespeichert.</li>
+</ul>
+<p>
+
+<b>16-09-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Mehr Kontrollen beim Anlegen eines neuen Projektes eingeführt.</li>
+<li><font color=GREEN">NEU</font>: Beim Zeitbasis-Diagrammen können Zeitspannen farblich markiert werden in denen bestimmte Bedingungen erfüllt sind. (z.B Aussentemp. > 15 °C)</li>
+<li><font color=GREEN">NEU</font>: Beim Laden von Grafikbeschreibungen kann nun gewählt werden ob der ursprüngliche Zeitraum (aus der GRA-Datei) oder ein anderer verwendet werden soll. (Schraubenschlüsselsymbol neben der Auswahlliste) <b>VORSICHT! Der Zeitraum im Grafiktitel wird im Moment noch nicht nachgeführt! (behebt auch Mantis 0000021)</b></li>
+<li><font color=RED">FIX</font>: Beim Einlesen einer Messpunktliste war der Feldtrenner nicht wählbar, und das Encoding nicht funktional.</li>
+<li><font color=RED">FIX</font>: Messpunktnamen mit "." sind nun zulässig.</li>
+<li><font color=RED">FIX</font>: Möglichen Fehler beim Löschen von Messpunkten entschärft.</li>
+<li><font color=RED">FIX</font>: Einlesen einer Gebäudeliste schlug fehl wenn die Flächenangaben leer waren.</li>
+</ul>
+<p>
+
+
+<b>06-09-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Messreihen können nun auch über einen Klick auf die Legende ausgewählt werden.</li>
+<li><font color=GREEN">NEU</font>: Achsen und deren Beschriftung werden in den Grafikbeschreibungen mitgespeichert. (Mantis 0000019)</li>
+<li><font color=GREEN">NEU</font>: Beschriftung der Legendeneinträge kann angepasst werden</li>
+<li><font color=GREEN">NEU</font>: Grafikeigenschaften sind nun über das Kontextmenü erreichbar. (Rechtsklick auf die Grafik -> Grafikeigenschaften)</li>
+<li><font color=GREEN">NEU</font>: Die Größe einer Grafik kann nun pixelgenau definiert werden. (Grafikeigenschaften -> Grafikinfo)</li>
+<li><font color=RED">FIX</font>: Fehler beim Lesen der Gebäudeliste beim Programmstart wenn einzelne Gebäude keiner Verbrauchskategorie zugeordnet waren</li>
+<li><font color=RED">FIX</font>: Vor dem Überschreiben bestehender Grafikbeschreibungen wird nun gewarnt.</li>
+<li><font color=RED">FIX</font>: Beim Aufruf von virtuellen Messpunkten erscheint nun ein Hinweis wenn eine der Komponenten nicht bekannt ist.</li>
+<li><font color=RED">FIX</font>: Wertefilter werden bei Scatterplots nun korrekt nachgeführt, auch wenn mehrere Messpunkte gewählt wurden.</li>
+</ul>
+<p>
+
+<b>15-07-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Zählerwechsel waren erstellbar, aber nicht einsehbar, veränderbar oder löschbar. Zählerwechseldialog komplett überarbeitet.</li>
+<li><font color=GREEN">NEU</font>: Zählerwechsel werden nun in Grafiken angezeigt wenn sie im Abfragebereich lagen.</li>
+<li><font color=GREEN">NEU</font>: Neue Kommandozeilenoption: Erstellen einer einfachen Liniengrafik durch direkte Angabe von Zeitraum und Messpunktnamen.</li>
+<li><font color=GREEN">NEU</font>: Bei Dauerliniendiagrammen können die Messwerte nun auf- oder absteigend sortiert werden.</li>
+<li><font color=RED">FIX</font>: Im Datenexport wurden Jahreswerte monatsweise ausgegeben</li>
+<li><font color=RED">FIX</font>: Datenbankupdate wurde entrümpelt</li>
+<li><font color=RED">FIX</font>: Kleinere Fehler bei Dauerliniendiagrammen behoben</li>
+<li><font color=RED">FIX</font>: Problem mit Zeichencodierung beim Anlegen von Projekten unter Windows behoben</li>
+<li><font color=RED">FIX</font>: Automatische Formaterkennung bei MON-Import war nicht immer zuverlässig. Zeitformat jetzt flexibler.</li>
+<li><font color=RED">FIX</font>: Zählerwechsel wurden u.U. nicht korrekt erkannt und ein negativer Verbrauch angeprangert.</li>
+<li><font color=RED">FIX</font>: Hilfefenster wurden nicht angezeigt.</li>
+<li><font color=RED">FIX</font>: Chartbeschreibungen wurden teilweise nicht mehr gelesen.</li>
+</ul>
+<p>
+
+<b>31-01-2011</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Bei der Eventumstrukturierung kann über die Anwendungeinstellungen festgelegt werden ob und wenn "ja" für welchen Zeitraum die Originaldatendaten in der Messwertdatenbank verbleiben sollen</li>
+<li><font color=RED">FIX</font>: Gespeicherte Chartbeschreibungen mit automatischer Achsenskalierung konnten nicht mehr aufgerufen werden. (Mantis 0000017)</li>
+<li><font color=RED">FIX</font>: Bei virtuellen Messpunkten hing die Berechnung, wenn ein anderer als der letzte Messpunkt in der Formel ohne Werte war. (Mantis 0000013)</li>
+<li><font color=RED">FIX</font>: Berechnungsabbruch wenn gleichzeitig aus Zählerständen die Leistung berechnet werden sollte und das Abfrageintervall mit fehlenden Daten begann</li>
+<li><font color=RED">FIX</font>: Bei der Eventumstrukturierung wurde das letzte Ereignis nicht (bzw. erst beim nächsten update) eingetragen wenn sich er Staus nicht geändert hat.</li>
+<li><font color=RED">FIX</font>: In der Datenpflege waren nur ganzzahlige Wertebereiche wählbar</li>
+</ul>
+<p>
+
+<b>17-12-2010</b>
+<ul>
+<li><font color=GREEN">NEU</font>: In der Qualitätsübersicht kann nun "von Messpunkt" als Toleranz gewählt werden. Dann werden die maximalen Updatezeiten des jeweiligen Messpunkts verwendet.
+<li><font color=GREEN">NEU</font>: Bedienbarkeit über Kommandozeile! Bisher: Import von CSV- und MON-Dateien, Erzeugung von PNG-Grafiken aus Chartbeschreibungen, Event-Umstrukturierung, Datenbank-Backup</li>
+<li><font color=GREEN">NEU</font>: Verschicken von Mails im Fehlerfall bei automatisierten Vorgängen über die Kommandozeile</li>
+<li><font color=GREEN">NEU</font>: Erste Version des Gebäudeprofil-Viewers</li>
+<li><font color=RED">FIX</font>: Robustere Vermeidung doppelter Eintrage in der Eventdatenbank, auch wenn diese nicht korrekt eingetragen werden.</li>
+<li><font color=RED">FIX</font>: Eventdaten wurden beim Datenlöschen nicht korrekt entfernt</li>
+<li><font color=RED">FIX</font>: Im Datenexport wurde die Messpunktsammlung nicht mehr gespeichert</li>
+<li><font color=RED">FIX</font>: Zeit-Vergleichsdiagramme konnten nicht als Chartbeschreibung gespeichert werden</li>
+<li><font color=RED">FIX</font>: Default-Log-ID wird nun regelmässig überprüft, nicht nur beim Programmstart</li>
+<li><font color=RED">FIX</font>: Virtuelle Messpunkte mit bestimmten Zeichen im Namen konnten nicht berechnet werden. Umbau des Berechnungssystems.</li>
+</ul>
+<p>
+
+
+
+<b>18-10-2010</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Backup der DB auf lokalen(!) Rechner möglich (Menü Datenbank-Backup)
+<li><font color=GREEN">NEU</font>: Gespeicherte Grafiken werden nun direkt beim auswählen geladen, nicht erst beim Klick auf den entsprechenden Knopf
+<li><font color=GREEN">NEU</font>: Chartbeschreibungen speichern nun auch die Fenstergröße der Grafik
+<li><font color=RED">FIX</font>: Fehler im Verbrauchskategorieneditor behoben (falsche Zuordnung)
+<li><font color=RED">FIX</font>: Einige Datentypen in der DB angepasst
+<li><font color=RED">FIX</font>: Falsche Achsenbeschriftung bei spezifischen Größen
+<li><font color=RED">FIX</font>: Achsenbedienfeld wurde bei reinen Eventplots nicht angezeigt
+<li><font color=RED">FIX</font>: Missverständluche Fehlermeldung beim CSV-Import entfernt
+<li><font color=RED">FIX</font>: Fehler beim Löschen von ALLEN Messwerten eines Datenpunktes (d.h. kompletter Zeitraum)
+<li><font color=RED">FIX</font>: Wenn nur ein ein Messwert in der Datenpflege gezeigt wurde geriet diese in einen undefinierten Zustand
+<li><font color=RED">FIX</font>: Unter Umständen "stiller" Abbruch beim Datenexport von Events - schien ewig zu laufen und nichts zu tun
+<li><font color=RED">FIX</font>: Bei zweiter Achse in Zeitdiagrammen u.U. falsche Farbzuordnungen
+</ul>
+<p>
+
+
+
+<b>21-09-2010</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Konsistenzprüfung für Datenbank über Menü "Datenbank -> Konsistenzprüfung" möglich
+<li><font color=RED">FIX</font>: Laden von Chartbeschreibungen mit leerem Titel führte zu Exception
+<li><font color=RED">FIX</font>: Verbrauchskategorieneditor komplett überarbeitet
+<li><font color=RED">FIX</font>: Beim Laden von Chartbeschreibungen wurden Aggregationsintervalle in einigen Fällen nicht korrekt aktualisiert
+</ul>
+<p>
+
+<b>10-09-2010</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Bei XY-Diagrammen wird im Tooltipp zu den Datenpunkten und beim Anzeigen der Werteliste nun auch der zugehörige Zeitpunkt angezeigt
+<li><font color=GREEN">NEU</font>: Überarbeiteter Zeitfilter für Tageszeit,Wochentage (bisher wurden gefilterte Daten evtl. als fehlende Daten interpretiert und entsprechend ersetzt)
+<li><font color=GREEN">NEU</font>: Datumsfilter hinzugefügt, mit dem bei XY-Plots der darzustellende Bereich eines Messpunktes weiter eingeschränkt werden kann (z.B. um Zeitbereiche farblich hervorzuheben)
+<li><font color=GREEN">NEU</font>: Für jedes Projekt wird unter dem Basisorder nun ein eigenes Verzeichnis erstellt, um mehr Übersicht zu schaffen
+<li><font color=GREEN">NEU</font>: Getunnelte SSH-Verbindungen können nun über die Anwendungseinstellungen definiert werden.
+<li><font color=GREEN">NEU</font>: Änderungen an der Beschriftung der Grafiken im Eigenschaftsdialog werden nur sofort während der Eingabe im Chart übernommen
+<li><font color=GREEN">NEU</font>: Messpunkte können nun über die Messpunkttabelle auch gelöscht werden
+<li><font color=GREEN">NEU</font>: Möglichkeit zur Konsistenzprüfung für die DB hinzugefügt (über Menü Datenbank)
+<li><font color=GREEN">NEU</font>: Beim CSV-Import nun auch UnixTimeStamp (Sekunden seit 01.01.1970) verwendbar (über Datumsformatwähler im CSC-Import-Dialog)
+<li><font color=RED">FIX</font>: Änderungen über die Datenpflege wurden nur sehr langsam übernommen
+<li><font color=RED">FIX</font>: Änderungen in der Messpunktliste wurden u.U. nicht übernommen
+<li><font color=RED">FIX</font>: Fehler bei virtuellen Messpunkten wenn die Messpunktkürzel mit einer Zahl begonnen haben
+<li><font color=RED">FIX</font>: Hilfefenster sorgte unter Windows evtl. für Unbedienbarkeit des Programms
+<li><font color=RED">FIX</font>: Weiteren Fehler bei Anwendung von Faktorwechseln behoben (nur aufgetreten wenn mehr als ein Faktorwechsel)
+<li><font color=RED">FIX</font>: Änderung der Auswahl eines Wertebereiches bei der Datenpflege (Bereich wurde nicht sofort markiert)
+<li><font color=RED">FIX</font>: Wesentliche Beschleunigung des Programmstarts (Lesen der Messpunktliste)
+<li><font color=RED">FIX</font>: Die Änderung der Plotreihenfolge bei Zeitbasis- und XY-Diagrammen berücksichtigte nur die Datenreihenfarbe, nicht die weiteren Darstellungsattribute
+<li><font color=RED">FIX</font>: Bei der Speicherung von Chartbeschreibungen wurde der Titel nicht mit abgespeichert
+<li><font color=RED">FIX</font>: Chartbeschreibungen von Zeitraumvergleichen konnten zwar gespeichert aber nicht wieder geladen werden.
+<li><font color=RED">FIX</font>: Bei Zeitraumvergleichen und Carpetplots wurde das Menü zur Änderung der Charteigenschaften nicht angezeigt
+<li><font color=RED">FIX</font>: Nach Änderung des Basisordners in den Anwendungseinstellungen wurden nicht alle Elemente automatisch aktualisiert (z.B. Liste der gespeicehrten Grafiken)
+<li><font color=RED">FIX</font>: Datenbankabfrage war über SSH-Tunnel extrem langsam wenn beim Messpunkt sehr viele Datenpunkte als ungültig markiert waren
+<li><font color=RED">FIX</font>: Die Liste der gespeicherten Chartbeschreibungen wird nun sortiert und nicht zufällig dargestellt
+<li><font color=RED">FIX</font>: Faktorenwechsel mit einer Uhrzeit ungleich '00:00:00' konnten nicht wieder entfernt werden
+<li><font color=RED">FIX</font>: Einheitenliste wurde nicht korrekt gelesen, dadurch konnten z.B. keine Messpunkte mehr verändert werden
+<li><font color=RED">FIX</font>: Interpolation von kleineren Zeitintervallen als das Aufzeichnungsintervall lieferte keine Werte, wenn die Gültigkeitsdauer des Messpunkts 0 war.
+<li><font color=RED">FIX</font>: Zoom/Pan-Funktionalität war in der Datenpflege nicht verfügbar
+<li><font color=RED">FIX</font>: Beim Löschen von Datenpunkten wurde am letzten zu löschenden Tag nur bis zur Uhrzeit zum Zeitpunkt des Funktionsaufrufs gelöscht
+<li><font color=RED">FIX</font>: Änderungen an den Einheiteneinstellungen der Messpunkte wurden nicht gespeichert
+<li><font color=RED">FIX</font>: Virtuelle Messpunkte die aus Zählern bestehen wurden u.U. nicht berechnet
+<li><font color=RED">FIX</font>: Beim Anlegen neuer Messpunkte bessere Kontrolle, ob Name und Schlüssel gültig, bzw. Messpunkt schon vorhanden
+<li><font color=RED">FIX</font>: Tabelle der Messpunkte wurde bei weniger als 20 Messpunkten leer angezeigt (Java-Interenes Problem bei JXtable)
+<li><font color=RED">FIX</font>: Einige Eintragungen wurden beim Anlegen neuer Messpunkte evtl. nicht übernommen
+<li><font color=RED">FIX</font>: Leere Verbrauchskategorien führten zum Absturz des Editors
+<li><font color=RED">FIX</font>: Abfangen von Messpunktschlüsseln und -Namen mit Leerzeichen
+<li><font color=RED">FIX</font>: Abfangen ungültigen/gelöschten Messpunkten in den Verbrauchskategorien
+<li><font color=RED">FIX</font>: Einige DB-Verbindungen wurden umbemerkt nicht geschlossen und führten im ungünstigesten Fall zu einem Absturz
+<li><font color=RED">FIX</font>: Datenbankpooling überarbeitet
+<li><font color=RED">FIX</font>: SSH-Tunneldaten wurden nur verwendet, wenn sie auch in den Anwendungseinstellungen hinterlegt waren. SSH-Einstellungen im Passwortdialog können nun gespeichert werden.
+<li><font color=RED">FIX</font>: Komfortfelder der Scatterplots nach DIN 7730 und 15251 angepasst
+<li><font color=RED">FIX</font>: Alle Virtuellen Messpunkte wurden als Zähler behandelt
+<li><font color=RED">FIX</font>: Scrollen der Messpunkttabelle war u.U. sehr langsam
+<li><font color=RED">FIX</font>: Bei Zeitseriendiagrammen wurde immer(!) eine rechte Werteachse gezeichnet
+<li><font color=RED">FIX</font>: CSV-Import brach bei doppelten Einträgen ab
+<li><font color=RED">FIX</font>: Beim Laden von Chartbeschreibungen von Zeitseriendiagrammen wurde nur die linke Werteachse zurückgeschrieben
+<li><font color=RED">FIX</font>: Überprüfung für den default-Log-Typ beim Start eingebaut
+<li><font color=RED">FIX</font>: Größe des maximal für die JVM zur Verfügung stehenden Speicherplatzes erhöht (1GB)
+
+</ul>
+<p>
+
+<b>22-03-2010</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Rückstellende Zähler implementiert (Zähler die auch ohne Zählerwechsel wieder zurück springen können)
+<li><font color=GREEN">NEU</font>: Vergleichstabelle zur Übersicht von Verbrauchsänderungen mit eingefärbten Zellen je nach Abweichung vom Vortag/Wochenmittel
+<li><font color=GREEN">NEU</font>: Komfortbereich nach DIN EN 15251 hinzugefügt
+<li><font color=RED">FIX</font>: Fehler beim CSV-Import bei Datenlücken am Ende einer Zeile
+<li><font color=RED">FIX</font>: Robustere Importfilter beim Import von MON-Dateien
+<li><font color=RED">FIX</font>: Änderungen im Dateneditor wurden u.U. nicht übernommen
+<li><font color=RED">FIX</font>: Fehler in der Intervallinterpolation führte u.U. zu ungewünschten "Nebenwirkungen"
+<li><font color=RED">FIX</font>: Wertefilter mit mehreren eingeschalteten Filtern führte zu Fehler (Grafik blieb hängen)
+<li><font color=RED">FIX</font>: Bei Carpetplots von Events wurde die obere und untere Wertegrenze auf unendlich gesetzt.
+<li><font color=RED">FIX</font>: Änderungen von Titel und Achsenbeschriftungen wurden nicht übernommen; Weitere Feheler bei Chart-Eigenschaften-Dialog behoben.
+<li><font color=RED">FIX</font>: Suche in der Messpunkttabelle nicht mehr Case-sensitiv; weitere durchsuchbare Spalten hinzugefügt
+<li><font color=RED">FIX</font>: Zuverlässigere Berechnung bei Verbräuchen über kleine Zeitintervalle wenn Datenlücken vorhanden sind
+<li><font color=RED">FIX</font>: Generelle Verbesserung der Intervallberechnung
+<li><font color=RED">FIX</font>: Bei eingetragenem Faktorwechsel wurde jeweils das erste Intervall mit einem falschen Faktor berechnet
+<li><font color=RED">FIX</font>: Eventuell fehlerhafte Startbedingung bei der Qualitätsübersicht von Events
+<li><font color=RED">FIX</font>: Überarbeitung der Event-Umstrukturierung
+<li><font color=RED">FIX</font>: Das jeweils letzte Intervall in der Liste der Aggregationswählers wurde fehlerhaft übernommen
+</ul>
+<p>
+
+<b>16-02-2010</b>
+<ul>
+<li><font color=RED">FIX</font>: Fehlerhafte Überprüfung beim Datenbank-Update
+</ul>
+<p>
+
+<b>09-02-2010</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Die zur Verfügung stehenden Aggregationsintervalle sind nun in den Anwendungseinstellungen einstellbar. Das kleinste Intervall sollte nicht kleiner gewählt werden als das Messintervall.
+<li><font color=GREEN">NEU</font>: Beim Anlegen eines Projektes kann nun auch eine Gebäudedatei (CSV) eingelesen werden.
+<li><font color=GREEN">NEU</font>: Bearbeitbare Tabelle für die Gebäuderverwaltung hinzugefügt (ähnlich Messpunkttabelle)
+<li><font color=GREEN">NEU</font>: Druckfunktion für Messpunkttabelle hinzugefügt (Knopf oben rechts)
+<li><font color=GREEN">NEU</font>: Wertefilter bei XY-Plots (weitere in Arbeit)
+<li><font color=GREEN">NEU</font>: CSV-Import von Messdaten hinzugefügt (Menü "Daten -> CSV-Import")
+<li><font color=GREEN">NEU</font>: Änderungsmöglichkeiten für Achsenskalierung, -Beschriftung, -Art, Gitterlinien und Zeichenreichenfolge (Knöpfe links neben Grafik)
+<li><font color=GREEN">NEU</font>: Framework für Hilfe-Menü geschaffen. Erste Einträge - weitere folgen
+<li><font color=GREEN">NEU</font>: Framework für Startup-Tipps geschaffen. Erste Einträge - weitere folgen (hier noch nicht aktivierbar)
+<li><font color=RED">FIX</font>: Anordnung der Balken in der Qualitätsübersicht entspricht nun der Reihenfolge der Messpunkte in der Auswahlliste
+<li><font color=RED">FIX</font>: Updatemechanismus der Datenbank intelligenter - erkennt nun, ob ein Update nötig ist.
+<li><font color=RED">FIX</font>: Messpunktintervall wurde mein Anlegen eines neuen Projektes nicht in die Datenbankübernommen.
+<li><font color=RED">FIX</font>: Beim Speichern als Grafik wurde die entprechende Dateiendung nicht hinzugefügt.
+</ul>
+<p>
+
+<b>11-12-2009</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Wenn eine Grafik ausgewählt wird, werden die linken Bedienfelder  entsprechend mitgeführt.
+<li><font color=RED">FIX</font>: Bei gespeicherten Chartbeschreibungen konnte immer nur die letzte erzeugte Grafik gespeichert bzw. wiederhergestellt werden
+<li><font color=RED">FIX</font>: allgemein robustere Übergabe von Objekten zwischen Klassen (noch nicht abgeschlossen)
+</ul>
+<p>
+
+<b>07-12-2009</b>
+<ul>
+<li><font color=RED">FIX</font>: Kleinere Fehler in der Datenbankerzeugung und beim Anwendungsstart korrigiert
+</ul>
+<p>
+
+<b>04-12-2009</b><br>
+<ul>
+<li><font color=GREEN">NEU</font>: In den Anwendungseinstellungen (Datenbehandlung) kann nun ein Wert eingestellt werden, der als Fehlerwert betrachtet wird. Dieser Wert wird beim Lesen aus der DB ignoriert.
+<li><font color=GREEN">NEU</font>: Im Datenexport kann nun gewählt werden, ob Eventdaten gemittelt werden sollen, oder ob deren signifikanter Wert ausgegeben werden soll. (z.B. Status ist 40 von 60 Minuten auf 1 und den Rest auf auf 0: signifikanter Wert=1, gemittelter Wert=0,666)
+<li><font color=GREEN">NEU</font>: Messpunkte können in Kategorien thematisch verwaltet werden (Messpunkte->Strukturierung)
+<li><font color=GREEN">NEU</font>: Die Auswahl von Messpunkten wird durch ein neues Auswahlfenster erleichert. Dieses bietet eine Strukturierung nach verschiedenen (voreingestellten) Themen und den vom Benutzer definierten Kategorien. Messpunke können daraus auf das "alte" Auswahlfeld gezogen werden (Doppelklick in Arbeit)
+<li><font color=GREEN">NEU</font>: Bei den Datumswählern können über vier Schnellwähler häufig gebrauchte Zeiträume mit einem Klick gewählt werden. (in Entwicklung: anpassbar)
+<li><font color=RED">FIX</font>: Umstellung des Wertfeldes der Datenbank auf DEZIMAL (vorher FLOAT) da Wertevergleiche/Berechnungen sonst unpräzise (FLOAT-Werte werden auf verschiedenen Betriebssystemen unterschiedlich interpretiert!
+<li><font color=RED">FIX</font>: Umschaltung von Verbrauch auf Leistung bei Zeitraumvergleichen wurde ignoriert.
+<li><font color=RED">FIX</font>: An einigen Stellen gab es keine Abfrage, ob überhaupt ein Messpunkt zur Darstellung ausgewählt wurde -> unvorhersehbares Verhalten
+</ul>
+<p>
+
+<b>20-10-2009</b>
+<ul>
+<li><font color=RED">FIX</font>: Bei Änderung mehrerer Messpunkte gleichzeitig wurde nur die erste Änderung in die DB geschrieben
+</ul>
+<p>
+
+<b>15-10-2009</b>
+<li><font color=RED">FIX</font>: Eintragen manueller Daten: u.U. inkonsistente Zustände in den Listen der Einträge behoben
+<li><font color=RED">FIX</font>: Messpunkteditor überarbeitet: einige Fehler behoben, virtuelle Messpunkte nun hierüber definierbar, schnellere Speicherung.
+</ul>
+<p>
+
+<b>30-09-2009</b>
+<ul>
+<li><font color=RED">FIX</font>: Fehler in MySQL-Library-Version (5.1.7, jetzt 5.1.10) verhinderte das korrekte Eintragen von Werten>
+</ul>
+<p>
+
+<b>15-09-2009</b>
+<ul>
+<li><font color=RED">FIX</font>: Manuelle Werte konnten wegen fehlerhafter Klassenzuweisung nicht eingetragen werden>
+<li><font color=RED">FIX</font>: Die Klasse zur Ermittlung des letzten Werts eines Messpunkts lieferte u.U. einen falschen Datumswert
+</ul>
+<p>
+
+<b>09-09-2009</b>
+<ul>
+<li><font color=RED">FIX</font>: Bei Scatterplots wurde für den Wert auf der y-Achse ein falsches Aggregationsintervall gewählt
+</ul>
+<p>
+
+<b>27-08-2009</b>
+<ul>
+<li><font color=RED">FIX</font>: Einige Angaben bei Änderungen im Sensoreditor wurden nicht übernommen (Einheit, virtuelle Definition, etc.)>
+<li><font color=RED">FIX</font>: Bei virtuellen Messpunkten wurden sich ändernde Faktoren vom falschen Messpunkt verwendet>
+<li><font color=GREEN">NEU</font>: Die Datumswähler sind nun bei der Wahl begrenzt auf den Zeitraum in den wirklich Daten vorliegen. Dieser Bereich wird bei DB-Verbindung auch in der Konsole angezeigt.
+<li><font color=RED">FIX</font>: Fehlzeiten wurden bei Stapelbalkendiagrammen nicht markiert
+<li> <font color=RED">FIX</font>: Bei der Wahl des Datums über den Kalender wurde eine falsche Uhrzeit als Beginn des zu betrachtenden Zeitraums geliefert
+</ul>
+<p>
+
+<b>31-07-2009</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Einführung von virtuellen Messpunkten. Es können neue Messpunkte angelegt werden die sich aus anderen Punkten zusammensetzen.(Bisher nur bei Zeitreihen-, XY-, Carpet- und Dauerliniendiagrammen wirksam)
+<li><font color=RED">FIX</font>: Änderungen in der Messpunktliste über die Messpunktübersicht wurden teilweise nicht korrekt in der DB gespeichert
+<li><font color=RED">FIX</font>: Umschaltung der Anzeige zwischen Messpunktname und Schlüssel über die Anwendungseinstellungen funktioniert nun auch in allen Auswahlfeldern
+<li><font color=RED">FIX</font>: Dauerliniendiagramme: Feinere Auflösung (keine "Treppen" mehr)
+</ul>
+<p>
+
+<b>27-07-2009</b>
+<ul>
+<li><font color=RED">FIX</font>: Messpunktnamen mit Sonderzeichen wurden u.U. nicht richtig erkannt
+<li><font color=GREEN">NEU</font>: Für ausgewählte Zeiträume können bestimmte Daten gelöscht werden. Menü "Daten -> Daten löschen"
+</ul>
+<p>
+
+<b>13-07-2009 (Wuppertal)</b>
+<ul>
+<li><font color=RED">FIX</font>: Zeitbeschränkung war nicht "über Nacht" möglich, d.h. z.B. von 19uhr bis 6Uhr
+<li><font color=RED">FIX</font>: Übersicht Datenqualität: der Zeitbereich zwischen den letzten vorhandenen daten und dem Ende des Abfragebereichs war immer grün. Man konnte also nicht schauen bis wann Daten vorliegen.
+<li><font color=RED">FIX</font>: Änderung der Passwort-Routine aufgrund von fehlerhafem Encoding von Sonderzeichen
+<li><font color=RED">FIX</font>: Stapelbalken: Exception bei der Auswahl einer Series und Anzeige deren Werte mit "Zeige Werte"
+<li><font color=GREEN">NEU</font>: Fenster "Anwendungsinfo": Tab zur Entwicklung des Speicherverbrauchs hinzugefügt (zur evtl. Problemfindung)
+<li><font color=RED">FIX</font>: Nochmalige Optimierung aller Datenbankabfragen - deutliche Performanz-Steigerung :-)
+<li><font color=RED">FIX</font>: Bedienbarkeit auch bei geringer Bildschirmauflösung (bis 800x600) noch möglich
+<li><font color=RED">FIX</font>: Kleiner Fehler beim Faktoränderungs-Dialog behoben
+<li><font color=GREEN">NEU</font>: Zählerwechsel können eingetragen werden (Menü 'Messpunkte -> Zählerwechsel')
+<li><font color=GREEN">NEU</font>: Datendateien (auch mehrere) im MON-Format können nun über die Monisoft-Oberfläche eingelesen werden (Menüpunkt 'Daten -> Datendatei einlesen')
+<li><font color=GREEN">NEU</font>: Ein Menüpunkt zum Update der Datenbankstruktur (für eventuelle, zukünftige Anpassungen) hinzugefügt. Nur nach Aufforderung betätigen!!!!
+</ul>
+<p>
+
+<b>23-06-2009 (Wuppertal)</b>
+<ul>
+<li><font color=RED">FIX</font>: In Anwendungseinstellungen Default-Datenbank und Server frei wählbar
+<li><font color=RED">FIX</font>: Einige mögliche Absturzstellen bei nicht existierendem Basisordner entschärft
+<li><font color=RED">FIX</font>: Einige Absturzursachen bei falscher Nutzereingabe behoben
+</ul>
+<p>
+
+<b>22-06-2009 (Wuppertal)</b>
+<ul>
+<li><font color=RED">FIX</font>: Messpunkteditor lieferte falsche Messintervalle (war nach Bearbeitung immer NULL)
+<li><font color=RED">FIX</font>: Überarbeitung der Reorganisation der Eventdaten (Berücksichtigung der Messpunktparameter (Intervall, Regelmässigkeit))
+<li><font color=RED">FIX</font>: Anzeige der Wertetabelle über Kontextmenü nun schneller
+<li><font color=RED">FIX</font>: Bei Faktorenwechsel Eintag des Faktors mit falscher SensorID.
+<li><font color=RED">FIX</font>: Robustere Übergabe von MesspunktIDs zwischen unterschiedlichen Pakteten
+<li><font color=RED">FIX</font>: Einheitliche Umstellung auf Übergabe von kompletten SensorProperties an die einzelnen Module (Altlast: bisher vor dem Aufruf zerpflückt, danach wieder zusammen gesetzt)
+<li><font color=RED">FIX</font>: Fehlerhafte Zuordnung der Bedienelemente bei Dauerlinien
+<li><font color=RED">FIX</font>: Wertetabelle über Kontextmenü hatte fehlerhafte Zeiteinträge (jeweils die Mitte statt den Start des Intervalls- z.B bei 10Min-Werten: 13:04:59, 13:14:59, 13:24:59 statt 13:00:00, 13:10:00, etc)
+<li><font color=RED">FIX</font>: Fehlerhafte Legende bei Zeitraumvergleichen
+<li><font color=GREEN">NEU</font>: Zoomen in Grafiken über Mausrad möglich
+<li><font color=RED">FIX</font>: Deutlich schnellere Grafik-Leistung
+<li><font color=RED">FIX</font>: Daten wurden bei nicht eingetragener Gültigkeitsspanne u.U. nicht dargestellt
+<li><font color=GREEN">NEU</font>: Event-Daten können nun in allen Diagrammarten dargestellt werden
+<li><font color=GREEN">NEU</font>: Event-Daten werden nun auch in der Qualitätsübersicht berücksichtigt
+<li><font color=RED">FIX</font>: In der tabellarischen Übersicht der Messpunkte kann jetzt editiert werden (vorher entsperren!). Mit einem Rechtsklick auf einen Datenpunkt kann dieser auch in einem Dialogfenster bearbeitet/angezeigt werden.
+<li><font color=RED">FIX</font>: Beim Abbrechen der Grafikgenerierung wurde unter Umständen das zugehörige Fenster nicht geschlossen
+<li><font color=GREEN">NEU</font>: Unterscheidung zwischen MesspunktID und Messpunktname. Die ID muss immer gleich bleiben, sie identifiziert den Messpunkt auch in den Importdateien. Der Name ist frei wählbar. Was in den Diagrammen/Export dargestellt wird ist über "Anwendungseinstellungen->Anzeige" einstellbar.
+<li><font color=GREEN">NEU</font>: Das Datum kann nun beim Wechseln der Grafikarten gelockt "mitgenommen" werden (Schloss neben den Datumsfelder)
+<li><font color=RED">FIX</font>: Darstellungszeitraum u.U. falsch bei Verbrauchsmesspunkten
+<li><font color=RED">FIX</font>: Die Protokollkonsole ist nun deutlich schneller und kann daher endlich sinnvoll genutzt werden.
+<li><font color=GREEN">NEU</font>: Protokollkonsole nun mit einem Devider vom Grafikbereich getrennt -> Grösse veränderbar
+<li><font color=GREEN">NEU</font>: Einführung einer Toleranz für die erlaubte zeitliche Abweichung an den Intervallgrenzen (einstellbar) in den Anwendungseinstellungen
+<li><font color=RED">FIX</font>: Durch (zum Testen) festgesetzte (und nicht aus Messwertliste ermittelte) Parameter wurden manche Intervalle versehentlich als ungülitig berechnet
+<li><font color=GREEN">NEU</font>: Neuer Menüeintrag um ein neues Projekt in der Datenbank anzulegen
+<li><font color=GREEN">NEU</font>: Umstellung der Softwareaktualisierung auf Java-WebStart
+<li><font color=GREEN">NEU</font>: Bei Scatterplots kann der zeitliche Beschränkung nun pro Messwert vorgenommen werden und ist nicht für alles Messpunkte gleich
+<li><font color=GREEN">NEU</font>: Menüpunkt zur Reorganisation von Event-Daten
+<li><font color=GREEN">NEU</font>: Bei Zeitachsendiagrammen werden Event-Daten in einem eigenen Achsensystem als Farbbalken dargestellt (grün = 1, rot = 0)
+<li><font color=GREEN">NEU</font>: Veränderung der Anmeldung: Nach Eingabe der Nutzerdaten und drücken des "Refresh"-Knopfes werden alle MoniSoft-Kompatiblen Datenbanken des Servers angezeigt
+</ul>
+<p>
+
+<b>18-12-2008</b>
+<ul>
+<li><font color=GREEN">NEU</font>: In der Qualitätsübersicht lassen sich jetzt die darzustellenden Messpunkte anwählen (noch in Arbeit: die Auswahl kann bald auch gespeichert, kompatibel zum Export)
+<li><font color=RED">FIX</font>: Speicherleck durch Fehler in JFreeChart entdeckt und umgangen. Geschlossene Grafiken sollten jetzt besser Speicher freigeben.
+<li><font color=GREEN">NEU</font>: Anwendungsstarter für Windows, Linux und OS X hinzugefügt. Bitte die jeweilige Datei starten und NICHT "jmonitoring.jar"
+<li><font color=RED">FIX</font>: Anwendung kann jetzt mehr Speicher nutzen (bisher nur maximal 64 MB)
+<li><font color=GREEN">NEU</font>: Den Grafiken wird nun unten ein Stempel mit aktuellem Datum, Uhrzeit, Benutzer und Datenbank hinzugefügt. (Über die Anwendungseinstellungen wählbar)
+</ul>
+<p>
+
+<b>12-12-2008</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Im Dateneditor lassen sich Werte nun auch über den Wertebereich auswählen (Minimum+Maximum angeben und Häkchen setzen). Nicht gewünschte Wertebereiche werden grau.
+<li><font color=RED">FIX</font>: Logisch überflüssige Prüfungen auf die Datengültigkeit und Typ-Castings wurden entfernt (machte Abfrage langsam)
+<li><font color=RED">FIX</font>: Änderungen in der Zeitserienerzeugung beschleunigen die Zeitseriendiagramme
+</ul>
+<p>
+
+<b>04-12-2008</b>
+<ul>
+<li><font color=RED">FIX</font>: Bei Carpetplots wurden niemals Stundenwerte berechnet
+<li><font color=RED">FIX</font>: Manueller Eintrag: Zählerstände VOR dem letzten in DB vorhandenen Eintrag konnten nicht eingetragen werden
+<li><font color=RED">FIX</font>: Manueller Eintrag: Durch Unschärfen (< 10^-9 )beim Vergleich von Dezimalzahlen konnten der letzte Wert nicht (gültig) übernommen werden wenn er Dezimalstellen hatte
+<li><font color=RED">FIX</font>: Manueller Eintrag: Exception wenn Zäherstände mit Nachkommastellen in DB gelesen werden sollen
+<li><font color=RED">FIX</font>: Datenbankabfragen: Alle Werte mit einem Log-Eintrag (z.B. manueller Eintrag, geändert etc.) wurden als ungültig deklariert
+<li><font color=RED">FIX</font>: Manueller Eintrag: Als ungültig markierte Werte wurden trotzdem als letzter, gültiger Zählerstand angezeigt
+</ul>
+<p>
+
+<b>13-11-2008</b>
+<ul>
+<li><font color=RED">FIX</font>: Fehlzeitenanzeige der Zeitseriendiagramme ist wieder verfügbar
+<li><font color=GREEN">NEU</font>: Der Sensoreditor (Datenpunkte -> Bearbeiten) ist nun voll funktionsfähig. Es können alle Parameter verändert  werden (in entsperrtem Zustand). Die Änderungen werden auf Wunsch in die DB eingetragen und sind sofort wirksam. Mit Rechts-Klich auf einen Datenpunkt wird er in einer Maske dargestellt.
+<li><font color=RED">FIX</font>: Bei gescheiterter Datenbankverbindung konte u.U. nur durch Neustart wieder verbunden werden.
+<li><font color=RED">FIX</font>: Fehlerhafte Darstellung in der Qualitätsübersicht bei Messpunkten bei denen der Beginn der Grafik in eine Fehlzeit fällt
+<li><font color=GREEN">NEU</font>: Die einzelnen Balken in der Qualitätsübersicht sind jetzt aktiv und durch einen Klick darauf wird der Dateneditor für den jeweiligen Messpunkt für das gerade sichtbare Zeitintervall eingeblendet
+<li><font color=RED">FIX</font>: Beim Datenexport wurde bei Datenlücken in der letzten Ausgabezeile ein "null" statt einer leeren Spalte ausgegeben
+<li><font color=RED">FIX</font>: Fehlende Werte bei CarpetPlots werden nicht mehr mit Farben aus dem Wertebereich belegt, sondern mit einer transparenten Zelle
+<li><font color=RED">FIX</font>: Bedienelemete in den Linken Tabs aufgeäumt - alle sind jetzt funtionsfähig
+<li><font color=RED">FIX</font>: Einmal gewählte Messpunkte bei Scatterplots waren nicht mehr abwählbar
+<li><font color=RED">FIX</font>: Bei Stapelbalken fehlerhafte Darstellung von Monatswerten
+<li><font color=RED">FIX</font>: Bei Dauerlinien werden nun auch die nicht erfassten Stunden ausgewiesen
+<li><font color=GREEN">NEU</font>: Neue Darstellungsart Zeitraumvergleich" zur Darstellung unterschiedlicher Zeiträume des selben Datenpunktes
+<li><font color=RED">FIX</font>: Das "Schieben der Grafik" über Ctrl funktioniert nun auch beim MAC über die Meta-Taste
+<li><font color=RED">FIX</font>: Bei XY-Diagrammen wurde am Messwert auf der y-Achse kein Umrechnungsfaktor angebracht
+ </ul>
+<p>
+
+<b>03-09-2008</b>
+<ul>
+<li><font color=RED">FIX</font>: Fehler im Thread-Casting verhinderte Datenexport
+</ul>
+<p>
+
+<b>02-09-2008</b>
+<ul>
+<li><font color=RED">FIX</font>: Fehler durch mangelnde Threadsicherheit (bei gleichzeitiger Ausführung mehrerer Berechnungen) behoben
+<li><font color=RED">FIX</font>: Umstellung auf Connection-Pooling der DB-Verbindung, dadurch nur dann Verbindung zur DB (und LED grün) wenn Abfrage aktiv (Ressourcenschonender)
+<li><font color=RED">FIX</font>: Nicht alle Daten verarbeitenden Klassen nutzen die dynamischen Faktoren (Faktoränderungen)
+<li><font color=GREEN">NEU</font>: Datenqualitätskontrolle verfügbar (bisher noch keine Überprüfung der Wertebereiche, nur Ausfall)
+<li><font color=GREEN">NEU</font>: Dialog zum Eintragen manueller Zählerstände
+<li><font color=GREEN">NEU</font>: Oberfläche ist bei Berechungen nicht mehr gesperrt, so dass mehrere Dinge gleichzeitig bearbeitet werden können.
+<li><font color=RED">FIX</font>: Aufräumen und Konsolidierung einiger Routinen
+<li><font color=GREEN">NEU</font>: Nutzung von Antialiasing für neu erzeugte Grafiken in den Anwendungseinstellungen einstellbar (über Kontextmenü pro Grafik immer übersteuerbar) (vorsicht macht Fenster beim Verschieben langsamer)
+<li><font color=GREEN">NEU</font>: Modus der Fensterverschiebung (beim Verschieben anzeigen oder nur Umrandung) in Anwendungseinstellungen wählbar (je nach System kann das eine oder das andere schneller sein)
+<li><font color=GREEN">NEU</font>: Freigabe der Oberfläche während der Grafikerzeugung und bessere Anzeige des Fortschritts (bisher nur bei Zeitreihen, XY-Diagrammen und der Qualitätskontrolle)
+<li><font color=GREEN">NEU</font>: Fenster haben einen Abbrechen-Knopf mit dem die Erzeugung gestoppt werden kann (bisher nur bei Zeitreihen ud XY-Diagrammen und der Qualitätskontrolle)
+<li><font color=RED">FIX</font>: Fehler bei der Intervallberechnung falls Zählerstände gewünscht waren konnte u.U. zum Abbrechen/Absturz der Berechnung führen...
+</ul>
+<p>
+
+<b>22-08-2008</b>
+<ul>
+<li><font color=RED">FIX</font>: Fehlerhafte Zustände bei der Datenbankverbindung wenn diese einmal gescheitert war (bitte überprüfen!!, bei mir hat es jetzt geklappt)
+<li><font color=RED">FIX</font>: Verkürzung des Darstellungsformats der x-Achsen Beschriftung für Monate (z.B. statt "Dezember 2008" jetzt "Dez 08") damit möglichst lange alle Monate beschriftet werden und nicht nur jeder 3. oder 4.
+<li><font color=RED">FIX</font>: Bei zweiter Y-Achse in "Zeitbasierten" Standard-Diagrammen waren keine Monatswerte anzuwählen
+<li><font color=RED">FIX</font>: Inkonsistenz bei der Handhabung von Verbäuchen/Leistungen und Zählerständen (es wurde u.U. kein Zählerstand für ein Intervall angezeigt obwohl daraus ein Verbrauch berechnet werden konnte)
+</ul>
+<p>
+
+<b>18-08-2008</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Definition von variablen Umrechnungsfaktoren (z.B. bei Zählerwechsel) im Menü Datenpunkte -> Faktorenwechsel
+<li><font color=RED">FIX</font>: Fehler bei der Behandlung von temporären Ausfällen von Zählern
+<li><font color=GREEN">NEU</font>: Wählbare Toleranz bei nicht vollständiger, zeitlicher Abdeckung der Intervalle im Menü "Extras -> Anwendungseinstellungen" im Tab "Datenbehandlung"
+<li><font color=GREEN">NEU</font>: Konsole zur Verfolgung (verfügbare Meldungen werden weiter ergänzt) der Intervallberechnung (Ein/Ausschaltbar über Menü "Extras -> Berechnungen protokollieren"). VORSICHT: bei sehr vielen Intervallen deutlich längere Berechnungszeiten.
+<li>WORKON: Editierbare Übersicht der Sensoreigenschaften zur Bearbeitung aller Parameter... (im Moment nur Anzeige)
+<li>WORKON: Maske zum Erstellen virtueller Messpunkte (z.B. Summe aus 2 Zählern)
+<li>WORKON: Speicherung von Grafiken. Tut mal und tut dann doch wieder nicht.... :o)
+<li>WORKON: Integration von Daniels Maske zur manuellen Zähereingabe
+</ul>
+<p>
+
+<b>07-08-2008</b>
+<ul>
+<li><font color=RED">FIX</font>: Vorbelegung des Standardpfades bei nicht vorhandener Konigurationsdatei (userPrefs) fehlerhaft
+<li><font color=GREEN">NEU</font>: Im Login-Dialog kann nun auch ein Port für die DB-Verbindung angegeben werden (nötig beim Tunneln über SSH)
+<li><font color=GREEN">NEU</font>: In den Benutzereinstellungen können nun Vorgaben für die Standardbelegung des Login-Dialogs (Tabelle, User, Port, Server) gemacht werden
+<li><font color=GREEN">NEU</font>: Filterung von nicht erlaubten Messwerten (0-Zählerwerte, Grenzwertüberschreitung, etc.) (neue Klasse DatasetCleaner)
+<li><font color=GREEN">NEU</font>: Komplette(!) Neugestaltung der Messdatenaggregierung
+<li><font color=GREEN">NEU</font>: Neue Klasse CustomMinutePeriod für beliebeige benutzerdefinierte Zeitintervalle (im Moment nur im Hintergrund, noch nicht über die Oberfläche wählbar). War nötig für nachfolgenden FIX.
+<li><font color=RED">FIX</font>: Monatswerte z.B. werden jetzt für echte Kalendermonate berechnet. (wenn man Monatswerte  vom 1.1.2008 bis 1.6.2008 wählt wird der komplette Juni mit berechnet, richtig ist daher 1.1.2008 bis 31.5.2008 :-) )
+<li><font color=GREEN">NEU</font>: Einklappbare Bereiche bei XY-Diagramm-Tab für Marker, Zeitbeschrängun etc.
+<li><font color=RED">FIX</font>: Neustrukturierung aller Datenerzeugenden Klassen bzgl. Parameterübergabe
+<li><font color=RED">FIX</font>: Einheitliche Handhabung der Interpolation von Zählern und diskreten Messwerten (bisher in durch getrennte Interpolation u.U. Fehler in der Intervallbildung möglich)
+<li><font color=GREEN">NEU</font>: Neue Klasse DateInterval zur einfacheren Handhabung der Intervalle
+<li><font color=GREEN">NEU</font>: Übersicht über Datenqualität durch Carpetplot (Menü: Datenpunkte -> Übersicht Datenqualität) (in Arbeit, daher noch seeeeehr langsam immer die komplette DB verwendet und es noc Darstellungsprobleme von JFreeChart gibt)
+<li><font color=GREEN">NEU</font>: Über das Feld "Periodic" (ja/nein) in der Tabelle der Sensoreigenschaften kann nun dazu verwendet werden um festzulegen ob ein Zähler regelmässig (also auch bei unverändertem Zählerstand) kommt oder nur bei Änderung. Damit wird verhindert, dass er als fehlender Wert interpretiret wird.
+<li>WORKON: Editierbare Übersicht der Sensoreigenschaften zur Bearbeitung aller Parameter...
+<li>WORKON: Konsole in der Intervallberechnungen protokolliert werden um besser herauszufinden wie und warum ein Wert so berechnet wurde wie er ist.
+<li>WORKON: Maske zum Erstellen virtueller Messpunkte (z.B. Summe aus 2 Zählern)
+<li>WORKON: Speicherung von Grafiken. Tut mal und tut dann doch wieder nicht.... :o)
+</ul>
+<p>
+
+<b>12-06-2008</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Neues Format für Zeitachsenbeschriftung mit besserer Übersicht
+<li><font color=GREEN">NEU</font>: Bei XY-Diagrammen hinterlegte, wählbare Markierungen (im Moment nur Komfortbereiche lt. ISO7730 und DIN1946)
+<li><font color=GREEN">NEU</font>: Werkzeug zur Überprüfung/Wartung der Datenqualität mit dem einzelne/mehrerer Messwerte als ungültig gelabelt werden können (neuer Reiter "Datenpflege")
+<li><font color=GREEN">NEU</font>: Grafikausschnitte können durch Halten der Strg-Taste mit der Maus verschoben werden (natürlich nur wenn hineingezoomt ist :o) )
+<li><font color=GREEN">NEU</font>: Zeitliche Beschränkung der betrachteten Daten auf Uhrzeit (z.B. Arbeitszeit)  sowie Wochentage oder Wochenenden (bei XY-Diagrammen)
+<li><font color=RED">FIX</font>: Nutzer-Einstellungen für Export-Zahlenformat werden nun richtig gespeichert und eingelesen
+<li><font color=RED">FIX</font>: Bei Carpetplots wird bei der Leistungsanzeige jetzt die korrekte Einheit angezeigt
+<li><font color=RED">FIX</font>: Standardpfade werden auch bei Windows richtig angelegt und die gespeicheren Messpunkt-Sets im Export werden nun über der Auswahlliste korrekt angezeigt
+<li><font color=GREEN">NEU</font>: Im Export können jetzt auch Rohdaten ausgegeben werden (keine Mittelung etc.). Dazu muss aber im Moment noch eine Datei pro Messpunkt erzeugt werden. Dabei wird der Name des Messpunkts an den für den Export gewählten Dateinamen angehängt
+<li><font color=GREEN">NEU</font>: Werte die über die Datenpflege für ungültig erklärt wurden werden weder mitberechnet noch angezeigt.
+<li><font color=RED">FIX</font>: Sinnvollere Vorgabe der Überschrift von Grafiken
+<li><font color=GREEN">NEU</font>: Angabe des Aggregationsintervalls für jeden Messpunkt in der Legende bzw. im Titel
+<li><font color=RED">FIX</font>: Verschiebung von Balken/Linien/Punkten um ein Intervall in Zeitachsen-Diagrammen behoben
+<li><font color=RED">FIX</font>: Alle aggregierten Werte werden nun auf den BEGINN des jeweiligen Intervalls gelegt
+<li><font color=RED">FIX</font>: Startzeitpunkt (jeweils erstes Feld) bei Carpet-Plots nun korrekt
+<li><font color=GREEN">NEU</font>: Export der Grafiken in PDF, SVG und PNG über Knöpfe in der Toolbar
+<li><font color=RED">FIX</font>: Bei Scatter-Plots jetzt auch Verbräuche und Leistungen auf der X-Achse verwendbar
+ </ul>
+<p>
+
+<b>03-03-2008</b>
+<ul>
+<li><font color=GREEN">NEU</font>: Selektionen für den Export können benannt und gepeichert werden
+<li><font color=RED">FIX</font>: Achsen bei Dauerliniendiagrammen sind jetzt tauschbar
+</ul>
+<p>
+
+<b>25-02-2008</b>
+<ul>
+<li><font color=RED">FIX</font>: Problem (EmtpyStackException) beim Datenexport von Werten die im gesamten(!) Exportzeitraum nicht vorhanden sind
+<li><font color=GREEN">NEU</font>: Im Exportmenü wechselt der Knopf zum Abbrechen des Exports nach dem Export auf "Schliessen"
+<li><font color=RED">FIX</font>: Problem beim Export ab Wochenintervall: Synchronitätsproblem zum Startzeitpunkt setzte alle Werte auf "null"
+<li><font color=RED">FIX</font>: Casting-Fehler verursachte "OutOfheap-Exception" bei Monatswerten
+<li><font color=RED">FIX</font>: Benutzereinstellungen für Feld- und Dezimaltrenner wurde nicht immer als Vorgabe in den Exportdialog übernommen
+<li><font color=RED">FIX</font>: Dateiname für temporäre Dateien konnte u.U. zu kurz sein ->  "java.lang.IllegalArgumentException: Prefix string too short"
+</ul>
+<p>
+
+<b>19-02-2008</b>
+<ul>
+<li><font color=RED">FIX</font>: Farbskala bei Carpetplots wird jetzt richtig berechnet (Fehler beim Skala-Minimum)
+<li><font color=GREEN">NEU</font>: Grenzwerte für Farbskala bei Carpetplots kann jetzt auch kleiner 1 sein (generell sind nun Dezimalstellen erlaubt).
+<li><font color=GREEN">NEU</font>: Bei Liniendiagrammen kann ein Haken gesetzt werden ob Fehlzeiten markiert werden sollen oder nicht (bisher: Gelbe Flächen wurden immer dargestellt -> manchmal verwirrend)
+<li><font color=RED">FIX</font>: Schaltflächen zur Sensorauswahl/abwahl beim Export funktionieren nun alle
+<li><font color=GREEN">NEU</font>: Beim Export kann der Feldtrenner und das Dezimalzeichen gewählt werden
+<li><font color=RED">FIX</font>: Bei XY-Diagrammen konnte es passieren, dass nicht alle Punkte gezeichnet wurden (im Diagramm bei 10-Minuten-Werten weniger Punkte als bei Stundenwerten)
+<li><font color=RED">FIX</font>: Aggregierung der Daten deutlich robuster, besonders bei fehlenden Daten zu Beginn und am Ende sowie bei Darstellung mehrerer Werte mit unterschiedlichen Fehlzeiten
+<li><font color=RED">FIX</font>: Optimierung (Beschleunigung) der Datenaufbereitung, besonders bei Zählern spürbar
+<li><font color=RED">FIX</font>: diverse kleinere Verbesserungen in Code
+<li><font color=RED">FIX</font>: Schriften und Legenden behalten beim Skalieren ihre Grösse und werden nicht verzerrt
+<li><font color=GREEN">NEU</font>: Framework für Benutzereinstellungen wurde geschaffen (bisher: Speicherort für Dateien, Exporteinstellungen). Siehe Extras->Anwendungseinstellungen
+<li><font color=GREEN">NEU</font>: gestapelte Balkendiagramme (checkbox)
+<li><font color=GREEN">NEU</font>: Dauerliniendiagramme implementiert
+<li><font color=GREEN">NEU</font>: Tabellarische Anzeige aller Messpunkte mit Filtermöglichkeit (Menü Datenpunkte - Achtung: Gross/Kleinschreibung wird (noch) beachtet))
+<li><font color=GREEN">NEU</font>: Toolbar jetzt belegt, damit einige Funktionen schneller erreichbar sind
+<li><font color=GREEN">NEU</font>: Filterbare Übersicht über alle Messpunkte (später auch für Änderungen an Parameter etc.)
+<li><font color=GREEN">NEU</font>: Rahmen für Balkendiagramme jetzt auch funktionsfähig
+<li><font color=RED">FIX</font>: Modul für Datenexport komplett neu geschrieben, benutzt jetzt temporäre Dateien um den RAM-Bedarf zu minimieren (10min-Export eines Jahres ALLER Messwerte jetzt möglich)
+<li><font color=GREEN">NEU</font>: Zahlenformat (Nachkommastellen, evtl. Einheit) für Datenexport wählbar
+<li><font color=RED">FIX</font>: Umgang mit dem Hauptspeicher optimiert - einige Fehler bei denen einfach "Nichts" passiert ist lagen an "out of heap space"
+<li><font color=RED">FIX</font>: Auslagern von sich wiederholendem Code in neue Klassen/Methoden (noch nicht abgeschlossen)
+<li><font color=GREEN">NEU</font>: Achsen jetzt über Knöpfe neben der Achse "live" skalierbar (bisher nur bei Diagrammen mit Zeitbasis)
+<li><font color=GREEN">NEU</font>: Info-Dialog um bei Problemem schnell an Infos zur JVM, Speicher, Version etc. zu kommen
+<li><font color=GREEN">NEU</font>: Debug-Konsole in der eventuelle Exceptions protokolliert werden
+<li><font color=RED">FIX</font>: Fehler bei der Berechung der Zeitintervalle wenn Aggregationszeitraum >=  Wochen
+<li><font color=GREEN">NEU</font>: Auslagerung der Zeit/CPU intensiven Arbeiten in eigene Threads, so dass die Oberfläche auf Statusänderungen reagiert (sonst Update erst wenn alles fertig)
+<li><font color=GREEN">NEU</font>: Besserers Feedback: in der Stauszeile jetzt Nachrichten über den Verlauf der Plotgenerierung, sowie "Eieruhr-Cursor" während Berechnungen
+</ul>
+<p>
+
+<b>29-10-2007</b>
+<ul>
+<li><font color=RED">FIX</font>: Fehler bei der Zeitstrahlerzeugung bei mehreren Werten zu einem Zeitpunkt behoben (wird später schon beim Daten eintragen gelöst)
+</ul>
+<p>
+
+<b>10-10-2007</b>
+<ul>
+<li><font color=GREEN">NEU</font>: SplitPane (Trennung zw. linker Bedienleiste und Grafikfläche) ist über zwei Pfeile oben ein und ausklappbar
+<li><font color=RED">FIX</font>: Maximieren des Fensters funktioniert wieder
+<li><font color=GREEN">NEU</font>: Fenster wird beim Start unabhängig von der Auflösung maximiert
+<li><font color=GREEN">NEU</font>: Eingabemasken für die Messpunkte sind (getrennt nach Achse) rücksetzbar ("X"-Taste)
+<li><font color=GREEN">NEU</font>: Bei Carpetdiagrammen wird auf der x-Achse nun das Datum und nicht der Tag des Jahres ausgegeben
+<li><font color=GREEN">NEU</font>: Bei Zählern lässt sich bei den zeitbasierten Diagrammen auch der Zählerstand darstellen
+</ul>
+<p>
+
+<b>27-09-2007</b>
+<ul>
+<li><font color=RED">FIX</font>: Carpetplots mit Werten < 1 werden korrekt dargestellt
+<li><font color=GREEN">NEU</font>: minimale Fenstergrösse auf 800x600 verkleinert
+<li><font color=RED">FIX</font>: einige kleinere Bugs
+</ul>
+<p>
+
+<b>25-09-2007</b>
+<ul>
+<li>Erste (halbwegs) lauffähige Version</li>
+</ul>
+</div>
+</body>
+</html>

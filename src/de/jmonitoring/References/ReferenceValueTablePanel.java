@@ -1,0 +1,384 @@
+package de.jmonitoring.References;
+
+import de.jmonitoring.TableModels.ReferenceEditorTableModel;
+import de.jmonitoring.TableModels.SensorTableModel;
+import de.jmonitoring.base.buildings.BuildingInformation;
+import de.jmonitoring.base.buildings.BuildingProperties;
+import de.jmonitoring.base.MainApplication;
+import de.jmonitoring.base.Messages;
+import de.jmonitoring.base.MoniSoft;
+import de.jmonitoring.base.MoniSoftConstants;
+import de.jmonitoring.help.ManualBookmarks;
+import de.jmonitoring.help.ManualViewer;
+import de.jmonitoring.utils.cellEditors.CellEditorDecimal;
+import java.awt.Color;
+import java.awt.print.PrinterException;
+import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Vector;
+import javax.swing.JInternalFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.border.LineBorder;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import org.jdesktop.swingx.JXTable;
+import org.jdesktop.swingx.decorator.ColorHighlighter;
+import org.jdesktop.swingx.decorator.HighlightPredicate;
+import org.jdesktop.swingx.decorator.HighlighterFactory;
+
+/**
+ * This is the main operation panel for the table of references
+ *
+ * @author togro
+ */
+public class ReferenceValueTablePanel extends javax.swing.JPanel {
+
+    private JXTable table;
+    private HashSet<Integer> changedRows = new HashSet<Integer>();
+    private Vector<Integer> columnUnitIDs = new Vector<Integer>();
+    private Vector<String> header;
+    private final MainApplication gui;
+
+    /**
+     * Creates new form ReferenceValueTablePanel
+     *
+     * @param gui The calling GUI
+     */
+    public ReferenceValueTablePanel(MainApplication gui) {
+        super();
+        this.gui = gui;
+        initComponents();
+        setTable();
+    }
+
+    /**
+     * Prepare the table
+     */
+    private void setTable() {
+        header = new Vector<String>();
+        header.add(java.util.ResourceBundle.getBundle("de/jmonitoring/Components/Bundle").getString("RefereneValueTablePanel.GEBÄUDE"));
+        for (ReferenceDescription reference : ReferenceInformation.getReferenceList()) {
+            header.add(reference.getName());
+            columnUnitIDs.add(reference.getUnitID());
+        }
+
+        ReferenceEditorTableModel tm = new ReferenceEditorTableModel(header, columnUnitIDs);
+        for (BuildingProperties building : BuildingInformation.getBuildingList()) {
+            tm.addRow(building.getBuildingID());
+        }
+
+        table = new JXTable(tm);
+        table.setFont(new java.awt.Font("Dialog", 0, 9));
+        table.getTableHeader().setFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 9));
+        table.setColumnControlVisible(true);
+        table.setHighlighters(HighlighterFactory.createSimpleStriping());
+        table.addHighlighter(new ColorHighlighter(HighlightPredicate.ROLLOVER_ROW, Color.getHSBColor(60f, 20f, 100f), Color.BLACK));
+        table.getColumn(0).setPreferredWidth(150);
+
+        for (int col = 1; col < table.getColumnCount(); col++) {
+            table.getColumn(col).setCellEditor(new CellEditorDecimal(2));
+        }
+
+        tableScrollPane.setViewportView(table);
+
+        tm.addTableModelListener(new TableModelListener() {
+            @Override
+            public void tableChanged(TableModelEvent e) {
+                if (e.getFirstRow() == TableModelEvent.HEADER_ROW) {
+                    changedRows.clear();
+                    for (int i = 0; i < table.getModel().getRowCount(); i++) {
+                        changedRows.add(i);
+                    }
+                } else {
+                    changedRows.add(e.getFirstRow());
+                }
+                savePropertyTableButton.setEnabled(true);
+            }
+        });
+
+        table.setEditable(false);
+        savePropertyTableButton.setEnabled(false);
+    }
+
+    /**
+     * Setzt das {@link SensorTableModel} auf die globale SensorListe zurück und
+     * aktualisiert die Tabelle
+     */
+    private void modelReset() {
+        // TODO: Abfrage ob Änderungen verworfen werden sollen
+        setTable();
+        table.revalidate();
+    }
+
+    /**
+     * Close the frame
+     */
+    private void close() {
+        if (changedRows.size() > 0 && JOptionPane.showConfirmDialog(this, java.util.ResourceBundle.getBundle("de/jmonitoring/Components/Bundle").getString("WENN SIE JETZT ABBRECHEN GEHEN ALLE ÄNDERUNGEN VERLOREN"), java.util.ResourceBundle.getBundle("de/jmonitoring/Components/Bundle").getString("RefereneValueTablePanel.FRAGE"), JOptionPane.YES_NO_OPTION) == JOptionPane.NO_OPTION) {
+            return; // nicht abgebrochen
+        }
+        table = null;
+        this.gui.disposeIFrame((JInternalFrame) this.getParent().getParent().getParent().getParent());
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        FilterPanel = new javax.swing.JPanel();
+        jButton25 = new javax.swing.JButton();
+        lockToggleButton = new javax.swing.JToggleButton();
+        printTableButton = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        savePropertyTableButton = new javax.swing.JButton();
+        cancelButton = new javax.swing.JButton();
+        tableScrollPane = new javax.swing.JScrollPane();
+
+        setLayout(new java.awt.BorderLayout());
+
+        FilterPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        FilterPanel.setMaximumSize(new java.awt.Dimension(32767, 23));
+        FilterPanel.setMinimumSize(new java.awt.Dimension(100, 23));
+
+        jButton25.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/de/jmonitoring/icons/arrow_undo.png"))); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("de/jmonitoring/References/Bundle"); // NOI18N
+        jButton25.setText(bundle.getString("ReferenceValueTablePanel.jButton25.text")); // NOI18N
+        jButton25.setToolTipText(bundle.getString("ReferenceValueTablePanel.jButton25.toolTipText")); // NOI18N
+        jButton25.setMaximumSize(new java.awt.Dimension(120, 22));
+        jButton25.setMinimumSize(new java.awt.Dimension(120, 22));
+        jButton25.setPreferredSize(new java.awt.Dimension(120, 22));
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
+
+        lockToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/de/jmonitoring/icons/lock.png"))); // NOI18N
+        lockToggleButton.setToolTipText(bundle.getString("ReferenceValueTablePanel.lockToggleButton.toolTipText")); // NOI18N
+        lockToggleButton.setBorder(null);
+        lockToggleButton.setBorderPainted(false);
+        lockToggleButton.setContentAreaFilled(false);
+        lockToggleButton.setFocusPainted(false);
+        lockToggleButton.setMaximumSize(new java.awt.Dimension(131, 20));
+        lockToggleButton.setMinimumSize(new java.awt.Dimension(131, 20));
+        lockToggleButton.setPreferredSize(new java.awt.Dimension(131, 20));
+        lockToggleButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/de/jmonitoring/icons/lock-unlock.png"))); // NOI18N
+        lockToggleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lockToggleButtonActionPerformed(evt);
+            }
+        });
+
+        printTableButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/de/jmonitoring/icons/printer.png"))); // NOI18N
+        printTableButton.setToolTipText(bundle.getString("ReferenceValueTablePanel.printTableButton.toolTipText")); // NOI18N
+        printTableButton.setMaximumSize(new java.awt.Dimension(20, 20));
+        printTableButton.setMinimumSize(new java.awt.Dimension(20, 20));
+        printTableButton.setPreferredSize(new java.awt.Dimension(20, 20));
+        printTableButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                printTableButtonActionPerformed(evt);
+            }
+        });
+
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/de/jmonitoring/icons/question-frame.png"))); // NOI18N
+        jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setFocusPainted(false);
+        jButton7.setIconTextGap(0);
+        jButton7.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7help(evt);
+            }
+        });
+
+        javax.swing.GroupLayout FilterPanelLayout = new javax.swing.GroupLayout(FilterPanel);
+        FilterPanel.setLayout(FilterPanelLayout);
+        FilterPanelLayout.setHorizontalGroup(
+            FilterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FilterPanelLayout.createSequentialGroup()
+                .addContainerGap(626, Short.MAX_VALUE)
+                .addComponent(printTableButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lockToggleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton7))
+        );
+        FilterPanelLayout.setVerticalGroup(
+            FilterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FilterPanelLayout.createSequentialGroup()
+                .addGroup(FilterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.CENTER, FilterPanelLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(lockToggleButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(FilterPanelLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addGroup(FilterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(printTableButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.CENTER, FilterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton7)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        add(FilterPanel, java.awt.BorderLayout.NORTH);
+
+        jPanel1.setToolTipText("");
+        jPanel1.setPreferredSize(new java.awt.Dimension(100, 35));
+
+        savePropertyTableButton.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        savePropertyTableButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/de/jmonitoring/icons/accept.png"))); // NOI18N
+        savePropertyTableButton.setText(bundle.getString("ReferenceValueTablePanel.savePropertyTableButton.text")); // NOI18N
+        savePropertyTableButton.setToolTipText(bundle.getString("ReferenceValueTablePanel.savePropertyTableButton.toolTipText")); // NOI18N
+        savePropertyTableButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                savePropertyTableButtonActionPerformed(evt);
+            }
+        });
+
+        cancelButton.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/de/jmonitoring/icons/cancel.png"))); // NOI18N
+        cancelButton.setText(bundle.getString("ReferenceValueTablePanel.cancelButton.text")); // NOI18N
+        cancelButton.setToolTipText(bundle.getString("ReferenceValueTablePanel.cancelButton.toolTipText")); // NOI18N
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(611, Short.MAX_VALUE)
+                .addComponent(cancelButton)
+                .addGap(10, 10, 10)
+                .addComponent(savePropertyTableButton)
+                .addGap(6, 6, 6))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cancelButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(savePropertyTableButton))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        add(jPanel1, java.awt.BorderLayout.PAGE_END);
+
+        tableScrollPane.setBackground(new java.awt.Color(255, 255, 255));
+        tableScrollPane.setForeground(new java.awt.Color(0, 0, 0));
+        tableScrollPane.setMinimumSize(new java.awt.Dimension(500, 500));
+        add(tableScrollPane, java.awt.BorderLayout.CENTER);
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        close();
+    }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void savePropertyTableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savePropertyTableButtonActionPerformed
+        if (MoniSoft.getInstance().ISTRIAL) {
+            Messages.showMessage(MoniSoftConstants.DEMO, true);
+            return;
+        }
+        ArrayList<ReferenceValue> referenceList;
+        int buildingID;
+        Double value;
+        for (Integer row : changedRows) {
+            referenceList = new ArrayList<ReferenceValue>();
+            buildingID = BuildingInformation.getBuildingIDFromName((String) table.getModel().getValueAt(row, 0));
+            for (int col = 1; col < table.getColumnCount(); col++) {
+                value = (Double) table.getModel().getValueAt(row, col);
+                if (value != null) {
+                    referenceList.add(new ReferenceValue(header.get(col), value, buildingID, null));
+                }
+            }
+
+            if (!referenceList.isEmpty()) {
+                BuildingInformation.updateBuildingReferences(referenceList, buildingID);
+            }
+        }
+        changedRows.clear();
+        savePropertyTableButton.setEnabled(false);
+    }//GEN-LAST:event_savePropertyTableButtonActionPerformed
+
+    private void lockToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lockToggleButtonActionPerformed
+        if (lockToggleButton.isSelected()) {
+            setLockTable(false);
+        } else {
+            setLockTable(true);
+        }
+    }//GEN-LAST:event_lockToggleButtonActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        // TODO: Abfrage ob Änderungen verworfen werden sollen
+        setTable();
+        table.revalidate();
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void printTableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printTableButtonActionPerformed
+        MessageFormat headerForm = new MessageFormat("Liste der Bezugsgrößen" + " " + MoniSoft.getInstance().getDBConnector().getDBName());
+        MessageFormat footerForm = new MessageFormat(java.util.ResourceBundle.getBundle("de/jmonitoring/Components/Bundle").getString("SensorTablePanel.PAGE") + " {0}");
+        try {
+            table.print(JTable.PrintMode.FIT_WIDTH, headerForm, footerForm, true, null, true);
+        } catch (PrinterException ex) {
+            Messages.showException(ex);
+            Messages.showException(ex);
+            Messages.showMessage(java.util.ResourceBundle.getBundle("de/jmonitoring/Components/Bundle").getString("SensorTablePanel.FEHLER BEIM DRUCKEN. BITTE DRUCKER ÜBERPRÜFEN"), true);
+        }
+    }//GEN-LAST:event_printTableButtonActionPerformed
+
+    private void jButton7help(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7help
+        if (!ManualViewer.isShown) {
+            ManualViewer viewer = new ManualViewer();
+            viewer.showManual();
+        }
+        ManualViewer.goToPage(ManualBookmarks.REFERENCES_TABLE.getPage());
+    }//GEN-LAST:event_jButton7help
+
+    /**
+     * Sperrt die Tabelle und ändert Menüeinstellungen je nachdem ob das
+     * Dialogfeld gesperrt ist oder nicht
+     *
+     * @param locked
+     */
+    private void setLockTable(boolean locked) {
+        if (locked) {
+            table.setEditable(false);
+            lockToggleButton.setSelected(false);
+            tableScrollPane.setBorder(null);
+//            ((JMenuItem) jPopupMenu1.getComponent(0)).setText("Anzeigen (gesperrt)");
+        } else {
+            table.setEditable(true);
+            lockToggleButton.setSelected(true);
+            tableScrollPane.setBorder(new LineBorder(Color.RED, 3));
+//            ((JMenuItem) jPopupMenu1.getComponent(0)).setText("Bearbeiten");
+        }
+//        jMenuItem2.setEnabled(!locked);
+    }
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel FilterPanel;
+    private javax.swing.JButton cancelButton;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JToggleButton lockToggleButton;
+    private javax.swing.JButton printTableButton;
+    private javax.swing.JButton savePropertyTableButton;
+    private javax.swing.JScrollPane tableScrollPane;
+    // End of variables declaration//GEN-END:variables
+}
