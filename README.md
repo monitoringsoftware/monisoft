@@ -2,14 +2,24 @@
 
 ![Monisoft Logo](src/monisoftsplash.png)
 
-MoniSoft ist eine Datenbankanwendung und besteht aus der Datenbank (Server) mit den Mess- und Steuerdaten sowie aus der eigentlichen MoniSoft-Software (Client), also der graphischen Oberfläche
-bzw. der Kommandozeile. Die Datenbank-Software selbst (MySQL) ist nicht Bestandteil von MoniSoft und muss zuvor getrennt installiert werden
+MoniSoft ist eine plattformunabhängige Software, die das Technische Monitoring und die Betriebsanalyse von Gebäuden vereinfacht. Durch eine datenbankbasierte Messwertverarbeitung mit Qualitätssicherungsfunktionen und vielfältigen Visualisierungsmöglichkeiten wird die Betriebsoptimierung von Gebäuden ermöglicht. Neben den eigentlichen Messdaten sind auch Informationen über das Gebäude, Flächen, Messpunkteigenschaften, Messdatenqualität und -plausibilität sowie Nutzereinstellungen enthalten. Somit kann die Software von Experten für detaillierte Auswertungen und von weniger erfahrenen Personen für eine schnelle Schwachstellenerkennung genutzt werden. Die einheitliche Datenstruktur ermöglicht Auswertungen über verschiedene Anlagen-,Gebäude und Quartiersbereiche hinaus. Einfache Strukturierung einer Vielzahl an Datenpunkten und eine graphische Oberfläche erleichtern das Arbeiten. Automatische Auswertungen und Erzeugung von Web-Grafiken und Mail-Nachrichten sind ebenfalls möglich.
+
+## Entwicklung und Publikation von MoniSoft
+
+### Karlsruher Institut für Technologie (KIT)
+
+In dem Zeitraum von 2007 bis 2015 ist am Fachgebiet Bauphysik und Technischer Ausbau (fbta) am Karlsruher Institut für Technologie (KIT) ein Softwarepaket zum Technischen Monitoring entstanden. Die deutschlandweite in über 20 Institutionen eingesetzte Software wurde im Rahmen von Forschungsprojekten, gefördert durch das Bundesministerium für Wirtschaft und Energie (BMWI) sowie das Bundesamt für Bauwesen und Raumordnung (BBR) entwickelt. 
+
+### Technische Hochschule Rosenheim (THRo)
+
+Ab dem Jahr 2014 erfolgte die Weiterentwicklung von MoniSoft an der Technischen Hochschule Rosenheim im Rahmen von Forschungsprojekten, gefördert durch das BMWI, EnEff:Stadt, BMWI Begleitforschung, EnEFF:Schule und dem Bundesinstitut für Bau,- Stadt- und Raumforschung im Bundesamt für Bauwesen und Raumordnung. Ein überarbeitetes Handbuch sowie Videotutorials leisten erstmals angemessenen Nutzer-Support. Parallel dazu wurde an der Hochschule Rosenheim damit begonnen, Erweiterungen zu programmieren sowie kleinere Fehler zu beheben. In der Zwischenzeit ist MoniSoft in die Jahre gekommen, wodurch eine Weiterentwicklung der Software nicht mehr sinngemäß ist. Somit wird MoniSoft hiermit die als OpenSource veröffentlicht. Dies erfolgt im Rahmen eines Forschungsprojektes gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz (BMWK).
+
 
 ## Voraussetzungen
 
-JDK: >= 8
-Maven: >= 3
-MySQL 5.5
+JDK: >= 8  
+Maven: >= 3  
+MySQL 5.5  
 
 ## Installation
 
@@ -30,6 +40,7 @@ MoniSoft starten
 java -jar jmonitoring
 ```
 
+Die Datenbank-Software selbst (MySQL) ist nicht Bestandteil von MoniSoft und muss zuvor getrennt installiert werden.  
 Detaillierte Informationen befinden sich im [MoniSoft-Handbuch](copy_to_dist/MoniSoft-Handbuch.pdf)
 
 ## MoniSoft-Screencast
