@@ -12,12 +12,14 @@ In dem Zeitraum von 2007 bis 2015 ist am Fachgebiet Bauphysik und Technischer Au
 
 ### Technische Hochschule Rosenheim (THRo)
 
-Ab dem Jahr 2014 erfolgte die Weiterentwicklung von MoniSoft an der Technischen Hochschule Rosenheim im Rahmen von Forschungsprojekten, gefördert durch das BMWI, EnEff:Stadt, BMWI Begleitforschung, EnEFF:Schule und dem Bundesinstitut für Bau,- Stadt- und Raumforschung im Bundesamt für Bauwesen und Raumordnung. Ein überarbeitetes Handbuch sowie Videotutorials leisten erstmals angemessenen Nutzer-Support. Parallel dazu wurde an der Hochschule Rosenheim damit begonnen, Erweiterungen zu programmieren sowie kleinere Fehler zu beheben. In der Zwischenzeit ist MoniSoft in die Jahre gekommen, wodurch eine Weiterentwicklung der Software nicht mehr sinngemäß ist. Somit wird MoniSoft hiermit die als OpenSource veröffentlicht. Dies erfolgt im Rahmen eines Forschungsprojektes gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz (BMWK).
+Ab dem Jahr 2014 erfolgte die Weiterentwicklung von MoniSoft an der Technischen Hochschule Rosenheim im Rahmen von Forschungsprojekten, gefördert durch das BMWI, EnEff:Stadt, BMWI Begleitforschung, EnEFF:Schule und dem Bundesinstitut für Bau,- Stadt- und Raumforschung im Bundesamt für Bauwesen und Raumordnung. Ein überarbeitetes Handbuch sowie Videotutorials leisten erstmals angemessenen Nutzer-Support. Parallel dazu wurde an der Hochschule Rosenheim damit begonnen, Erweiterungen zu programmieren sowie kleinere Fehler zu beheben. In der Zwischenzeit ist MoniSoft in die Jahre gekommen, wodurch eine Weiterentwicklung der Software nicht mehr sinngemäß ist. Somit wird MoniSoft hiermit als OpenSource veröffentlicht. Dies erfolgt im Rahmen eines Forschungsprojektes gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz (BMWK).
 
+### Begleitforschung: Institut für ZukunftsEnergie- und Stoffstromsysteme (IZES)
+Als Begleitforschung für Technisches Monitoring übernimmt das Institut für ZukunftsEnergie- und Stoffstromsysteme an der Hochschule für Technik und Wirtschaft (HTW) die Koordination für Interessenten an MoniSoft. 
 
 ## Voraussetzungen
 
-JDK: >= 8  
+JDK: = 8  
 Maven: >= 3  
 MySQL 5.5  
 
@@ -32,12 +34,12 @@ git clone https://github.com/monitoringsoftware/monisoft
 MoniSoft erstellen
 
 ```
-mvn
+mvn 
 ```
 MoniSoft starten
 
 ```
-java -jar jmonitoring
+java -jar jmonitoring.jar
 ```
 
 Die Datenbank-Software selbst (MySQL) ist nicht Bestandteil von MoniSoft und muss zuvor getrennt installiert werden.  
